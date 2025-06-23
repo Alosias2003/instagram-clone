@@ -1,12 +1,35 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import { Box } from '@mui/material';
+import React from 'react'; 
+import Story from './Story';
+import Post from './Post';
+
 
 const Main = () => {
   return (
-    <Box style={{ flex: 0.5, backgroundColor: 'red' }}>
-    
-    </Box>
-  )
-}
+    <Box className='main'
+      style={{
+        flex: 0.7,  
+      }}
+    >
+      
+        <Box className='storyblock'>
+        <Box className='storyparticular'>
+          <Box className='storyimg'>
+            <Story />
+          </Box>
+          <Post />
+        </Box>
+      </Box>
 
-export default Main
+                
+      </Box>
+    
+    // </Box>
+  );
+};
+
+export default Main;
+
+ 
+
+

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "image",
+    "url": "https://via.placeholder.com/300x200.png?text=Image+1"
+  },
+  {
+    "type": "video",
+    "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+  },
+  {
+    "type": "image",
+    "url": "https://via.placeholder.com/300x200.png?text=Image+2"
+  },
+  {
+    "type": "video",
+    "url": "https://www.w3schools.com/html/movie.mp4"
+  },
+  {
+    "type": "image",
+    "url": "https://via.placeholder.com/300x200.png?text=Image+3"
+  }
+]

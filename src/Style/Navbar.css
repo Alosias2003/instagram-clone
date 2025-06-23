@@ -1,0 +1,60 @@
+/* 
+
+
+
+ .navlink {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  color: black;
+}
+
+
+
+.navname {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.belowpart {
+  margin-top: 20px;
+} */
+
+
+
+.navlink {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #262626;
+  transition: all 0.2s ease;
+}
+
+.navname {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  white-space: nowrap;
+}
+
+.belowpart {
+  margin-top: 20px;
+}
+
+/* Ensure no conflicting styles override MUI */
+.navlink:hover {
+  background-color: #fafafa !important;
+}
+
+.navlink.active {
+  background-color: #e9ecef !important;
+}

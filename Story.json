@@ -1,0 +1,271 @@
+{
+  "story": [
+    {
+      "id": 1,
+      "username": "aloy1",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "mark2",
+      "profilePic": "https://i.pinimg.com/736x/ba/f6/7d/baf67d9dade5bee792d9795815d6d05a.jpg",
+      "stories": [
+        {
+          "url": "/stories/mark1.jpg",
+          "type": "image",
+          "duration": 5000
+        }
+      ]
+    },
+     {
+      "id": 3,
+      "username": "ark3",
+      "profilePic": "https://i.pinimg.com/736x/ba/f6/7d/baf67d9dade5bee792d9795815d6d05a.jpg",
+      "stories": [
+        {
+          "url": "/stories/mark1.jpg",
+          "type": "image",
+          "duration": 5000
+        }
+      ]
+    },
+     {
+      "id": 4,
+      "username": "mar4",
+      "profilePic": "https://i.pinimg.com/736x/ba/f6/7d/baf67d9dade5bee792d9795815d6d05a.jpg",
+      "stories": [
+        {
+          "url": "/stories/mark1.jpg",
+          "type": "image",
+          "duration": 5000
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "username": "aloy5",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "username": "aloy6",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "username": "aloy7",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "username": "aloy8",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "username": "aloy9",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "username": "aloy10",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "username": "aloy11",
+      "profilePic": "https://wallpaperaccess.com/full/2095247.jpg",
+      "stories": [
+        {
+          "url": "https://wallpaperaccess.com/full/2095247.jpg",
+          "type": "image",
+          "duration": 5000
+        },
+        {
+          "url": "WhatsApp Video 2025-05-19 at 15.09.50_ea900304.mp4",
+          "type": "video",
+          "duration": 10000
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "username": "mark12",
+      "profilePic": "https://i.pinimg.com/736x/ba/f6/7d/baf67d9dade5bee792d9795815d6d05a.jpg",
+      "stories": [
+        {
+          "url": "/stories/mark1.jpg",
+          "type": "image",
+          "duration": 5000
+        }
+      ]
+    }
+  
+      ],
+
+     "Explore":[
+      [
+  {
+    "id": 1,
+    "type": "image",
+    "src": "https://picsum.photos/400/500",
+    "username": "nature_lens",
+    "caption": "Sunset at the lake",
+    "likes": 204,
+    "comments": 19
+  },
+  {
+    "id": 2,
+    "type": "video",
+    "src": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "username": "travelvibes",
+    "caption": "Bali mornings!",
+    "likes": 315,
+    "comments": 45
+  }
+]
+
+     ],
+     
+  "reels": [
+    {
+      "id": 1,
+      "username": "nature_lover",
+      "caption": "Feel the calm of nature 🌿",
+      "src": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "likes": 128,
+      "comments": [
+        { "user": "alex", "text": "Wow, beautiful!" },
+        { "user": "lisa", "text": "Where is this place?" }
+      ],
+      "audio": "Nature Vibes"
+    },
+    {
+      "id": 2,
+      "username": "chef_daily",
+      "caption": "Quick pasta recipe 🍝",
+      "src": "https://cdn.pixabay.com/vimeo/769610275/food-142096.mp4?width=640&hash=6e1476d8300e7317f7257fc0c7b2be2691452466",
+      "likes": 210,
+      "comments": [
+        { "user": "foodie98", "text": "I’m trying this tonight!" }
+      ],
+      "audio": "Lo-fi Kitchen Beats"
+    },
+    {
+      "id": 3,
+      "username": "urban_timelapse",
+      "caption": "City lights never sleep 🌆",
+      "src": "https://cdn.pixabay.com/vimeo/446805568/city-34560.mp4?width=640&hash=71eb5c05b9bcdf81ae9c57999ffbcb3c90eb4bce",
+      "likes": 312,
+      "comments": [],
+      "audio": "City Pulse"
+    },
+    {
+      "id": 4,
+      "username": "fitness_mania",
+      "caption": "Morning stretches 💪",
+      "src": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+      "likes": 421,
+      "comments": [
+        { "user": "john_fit", "text": "Solid start to the day!" }
+      ],
+      "audio": "Workout Beats"
+    },
+    {
+      "id": 5,
+      "username": "pet_zone",
+      "caption": "Puppy chasing butterflies 🐶🦋",
+      "src": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+      "likes": 587,
+      "comments": [
+        { "user": "samy_pet", "text": "Adorable 😍" }
+      ],
+      "audio": "Cute Moments"
+    }
+  ]
+    }
+  
