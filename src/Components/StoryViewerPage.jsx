@@ -104,7 +104,7 @@ const StoryViewerPage = () => {
         setCurrentIndex(index);
       } catch (err) {
         console.error('Error fetching stories', err);
-        navigate('/stories');
+        // navigate('/stories');
       }
     };
 
@@ -117,7 +117,7 @@ const StoryViewerPage = () => {
       localStorage.setItem('currentStory', JSON.stringify(users[nextIndex]));
       setCurrentIndex(nextIndex);
     } else {
-      navigate('/stories');
+      // navigate('/stories');
     }
   };
 
@@ -127,7 +127,7 @@ const StoryViewerPage = () => {
       localStorage.setItem('currentStory', JSON.stringify(users[prevIndex]));
       setCurrentIndex(prevIndex);
     } else {
-      navigate('/stories');
+      // navigate('/stories');
     }
   };
 

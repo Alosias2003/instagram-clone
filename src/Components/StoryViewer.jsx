@@ -215,4 +215,3 @@ const StoryViewer = ({ story, onClose, onNext, onPrev }) => {
 
 export default StoryViewer;
 
-
