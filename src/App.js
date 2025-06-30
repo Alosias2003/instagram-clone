@@ -72,6 +72,11 @@ import Explore from './Components/Explore';
 import Navbar from './Components/Navbar';
 import Reels from './Components/Reels';
 import CreatePost from './Components/CreatePost';
+import { ToastContainer } from 'react-toastify';
+import Messages from './Components/Messages';
+import Profile from './Components/Profile';
+import EditProfile from './Components/EditProfile';
+
 
 // Custom hook to sync modal state with location
 const useModalSync = (setOpen) => {
@@ -123,22 +128,20 @@ function App() {
           }
         />
         <Route
-          path="/reels"
-          element={
-            <>
-              <Reels />
-            </>
-          }
-        />
+          path="/reels"element={<><Reels /></>}/>
         <Route
           path="/createpost"
           element={<CreatePost open={open} onClose={handleClose} />}
         />
-    
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/editprofile" element={<EditProfile />} />
+      
       
     </Routes>
     {/* Render CreatePost modal globally */}
       <CreatePost open={open} onClose={handleClose} />
+          <ToastContainer position="top-right" />
     </>
   );
 }
