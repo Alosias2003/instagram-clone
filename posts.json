@@ -137,27 +137,6 @@
       "createdAt": "2025-05-21T19:00:00Z"
     },
     {
-      "id": "7",
-      "author": {
-        "username": "fit.motivation",
-        "profileImage": "https://randomuser.me/api/portraits/women/43.jpg",
-        "isVerified": false
-      },
-      "caption": "No pain, no gain 💪",
-      "likes": 5400,
-      "comments": [
-        {
-          "id": 1,
-          "username": "lift_heavy",
-          "text": "Respect!"
-        }
-      ],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1594737625785-c90f6d53ae3d"
-      },
-      "createdAt": "2025-05-21T06:45:00Z"
-    },
-    {
       "id": "8",
       "author": {
         "username": "pet_lovers",
@@ -221,36 +200,6 @@
       "createdAt": "2025-05-19T20:45:00Z"
     },
     {
-      "id": "11",
-      "author": {
-        "username": "indian_classics",
-        "profileImage": "https://randomuser.me/api/portraits/men/33.jpg",
-        "isVerified": false
-      },
-      "caption": "Vintage Chennai ❤️",
-      "likes": 4500,
-      "comments": [],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1592200573499-03fefb9f3c27"
-      },
-      "createdAt": "2025-05-19T07:00:00Z"
-    },
-    {
-      "id": "12",
-      "author": {
-        "username": "urban_sketch",
-        "profileImage": "https://randomuser.me/api/portraits/women/29.jpg",
-        "isVerified": true
-      },
-      "caption": "Sketching my city skyline 🏙️",
-      "likes": 7200,
-      "comments": [],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1505843576272-ff9f3f4f5882"
-      },
-      "createdAt": "2025-05-18T14:00:00Z"
-    },
-    {
       "id": "13",
       "author": {
         "username": "astro_fan",
@@ -287,21 +236,6 @@
       "createdAt": "2025-05-17T08:00:00Z"
     },
     {
-      "id": "15",
-      "author": {
-        "username": "code.wizard",
-        "profileImage": "https://randomuser.me/api/portraits/men/88.jpg",
-        "isVerified": false
-      },
-      "caption": "Another bug bites the dust 💻🐛",
-      "likes": 7900,
-      "comments": [],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1537432376769-00a062f7f3e8"
-      },
-      "createdAt": "2025-05-17T22:00:00Z"
-    },
-    {
       "id": "16",
       "author": {
         "username": "beach.bum",
@@ -332,36 +266,6 @@
       "createdAt": "2025-05-16T10:00:00Z"
     },
     {
-      "id": "18",
-      "author": {
-        "username": "drone_shots",
-        "profileImage": "https://randomuser.me/api/portraits/men/72.jpg",
-        "isVerified": false
-      },
-      "caption": "Bird's eye view 🎥🚁",
-      "likes": 5600,
-      "comments": [],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1534081333815-ae5019106623"
-      },
-      "createdAt": "2025-05-15T14:45:00Z"
-    },
-    {
-      "id": "19",
-      "author": {
-        "username": "desi_flavors",
-        "profileImage": "https://randomuser.me/api/portraits/women/55.jpg",
-        "isVerified": true
-      },
-      "caption": "Street food diaries 🍛🍢",
-      "likes": 6900,
-      "comments": [],
-      "content": {
-        "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb36"
-      },
-      "createdAt": "2025-05-15T09:30:00Z"
-    },
-    {
       "id": "20",
       "author": {
         "username": "artsy.vision",
@@ -377,239 +281,29 @@
       "createdAt": "2025-05-14T16:00:00Z"
     },
     {
-      "id": "be1a",
-      "caption": "vdvdv",
+      "id": "a62e",
+      "caption": "I'm Bat Man",
       "content": {
-        "image": "blob:http://localhost:3000/ded849a1-b895-4a89-b1ee-5c3767ecf48b"
+        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1752553676/bk1wycmxhzc9wonsfqxr.jpg"
       },
       "likes": 0,
       "comments": [],
-      "createdAt": "2025-06-24T08:13:20.878Z",
+      "createdAt": "2025-07-15T04:27:56.576Z",
       "author": {
-        "username": "your_username",
+        "username": "aloys",
         "profileImage": "/default-avatar.png",
         "isVerified": false
       }
     },
     {
-      "id": "3bad",
-      "caption": "aloy",
-      "content": {
-        "image": "blob:http://localhost:3000/aa59c343-d534-4732-80d6-e5720ff76460"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-24T08:14:51.388Z",
-      "author": {
-        "username": "your_username",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "7bd7",
-      "caption": "vishak",
-      "content": {
-        "video": "blob:http://localhost:3000/30eda477-e6aa-45e3-8506-d1c0e46554ba"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-24T08:17:33.652Z",
-      "author": {
-        "username": "your_username",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "4d13",
-      "caption": "joker",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1750756494/u1few7nwtgmqiwhzevvl.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-24T09:14:54.854Z",
-      "author": {
-        "username": "your_username",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "e3d9",
-      "caption": "win",
-      "content": {
-        "video": "https://res.cloudinary.com/dpggrwvvt/video/upload/v1750759463/r4yntpqwcf7lcbkzc1qy.mp4"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-24T10:04:25.867Z",
-      "author": {
-        "username": "your_username",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "abda",
-      "caption": "bkjbkj",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1750862410/iv0top1rhrqe9fadtnsz.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-25T14:40:11.047Z",
-      "author": {
-        "username": "your_username",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "14f3",
-      "caption": "I'm BatMan\n",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751242446/rptjen8ckt0y2eercufn.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:14:08.124Z",
-      "author": {
-        "username": "Unknown User",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "b708",
-      "caption": "jkjbb",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751242804/yafm1wdkz0enqz2hutmd.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:20:05.090Z",
-      "author": {
-        "username": "Unknown User",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "c5c3",
+      "id": "edf6",
       "caption": "",
       "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751243205/g2ro3rnsmuavtppatcsb.jpg"
+        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1753589886/y3xn0xqcdhbwgcaveytq.png"
       },
       "likes": 0,
       "comments": [],
-      "createdAt": "2025-06-30T00:26:46.162Z",
-      "author": {
-        "username": "Unknown User",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "3f2d",
-      "caption": "bjbjkb",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751244644/b6v7foq2lbm0xsh3twli.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:50:45.543Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "19e0",
-      "caption": "b,bjkbjk",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751244868/nqgsgsvww9f6neo04qn1.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:54:29.095Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "99ac",
-      "caption": "",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751244933/sbzlix4fjyiwvvxkulgb.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:55:34.435Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "87c4",
-      "caption": "",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751244993/jpmevusmqr0s0sd3qgru.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T00:56:34.846Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "52b7",
-      "caption": "",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751245359/e7sepnmaj5olghljhdgj.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T01:02:40.812Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "5f60",
-      "caption": "calm\n",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751246152/svh0alopvs6c9kli8tpg.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T01:15:53.371Z",
-      "author": {
-        "username": "aloys",
-        "profileImage": "/default-avatar.png",
-        "isVerified": false
-      }
-    },
-    {
-      "id": "9fa8",
-      "caption": "",
-      "content": {
-        "image": "https://res.cloudinary.com/dpggrwvvt/image/upload/v1751246911/eeon18raszjpnbjalgqk.jpg"
-      },
-      "likes": 0,
-      "comments": [],
-      "createdAt": "2025-06-30T01:28:32.691Z",
+      "createdAt": "2025-07-27T04:18:06.470Z",
       "author": {
         "username": "aloys",
         "profileImage": "/default-avatar.png",

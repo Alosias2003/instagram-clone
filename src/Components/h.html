@@ -131,3 +131,179 @@
     </div>
 </body>
 </html>
+
+
+.story-bar{
+ display: flex;
+  flex-wrap: nowrap;            
+  height: 120px;
+  width: 73%;           
+  overflow-x: auto;            
+  overflow-y: hidden;          
+  margin: 20px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  gap: 30px;
+  align-items: center; 
+  scroll-behavior: smooth; 
+  
+} 
+
+.story-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.story-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.story-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  min-width: 66px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.story-avatar {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.story-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.story-username {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #262626;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 66px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ======= Seen vs. Unseen Styling ======= */
+
+.story-avatar-container.seen .story-avatar {
+  background: #c7c7c7; /* gray ring for seen */
+}
+
+/* ======= Desktop Styles ======= */
+
+@media (min-width: 769px) {
+  .story-bar {
+    padding: 16px 50px;
+    border-radius: 8px;
+    margin: 20px auto;
+    gap: 18px;
+    max-width: 614px;
+  }
+
+  .story-avatar-container {
+    min-width: 74px;
+  }
+
+  .story-avatar {
+    width: 74px;
+    height: 74px;
+  }
+
+  .story-avatar img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .story-username {
+    max-width: 74px;
+  }
+}
+
+/* ======= Tablet Styles ======= */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .story-bar {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+}
+
+/* ======= Mobile Styles ======= */
+
+@media (max-width: 480px) {
+  .story-bar {
+    padding: 8px 12px;
+    gap: 24px; /* realistic Instagram mobile gap */
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: 0;
+    margin: 0;
+  
+    max-width: 614px;
+  }
+
+  .story-avatar-container {
+    min-width: 66px;
+  }
+
+  .story-avatar {
+    width: 127px;
+    height: 127px;
+  }
+
+  .story-avatar img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .story-username {
+    font-size: 11px;
+    max-width: 66px;
+    margin-top: 3px;
+  }
+}
+
+/* ======= Extra Small Mobile Styles ======= */
+
+@media (max-width: 360px) {
+  .story-bar {
+    padding: 6px 8px;
+    gap: 15px;
+   
+    max-width: 614px;
+  }
+
+  .story-avatar-container {
+    min-width: 70px;
+  }
+
+  .story-avatar {
+    width:140px;
+    height:140px;
+  }
+
+  .story-avatar img {
+    width:130px;
+    height:130px;
+  }
+
+  .story-username {
+    font-size: 20px;
+    max-width: 56px;
+  }
+}

@@ -1,59 +1,172 @@
-.storyblock{
-  width: 100%;
-  /* border: 1px solid black; */
-  height: 200px;
+.story-container {
   display: flex;
- margin-left: 13%;
- box-sizing: border-box;
- 
-
-
- 
-  
-  
-}
-.storyparticular{
+  justify-content: flex-start !important; /* Force left alignment */
   width: 100%;
-  height: 66px;
-  
-  
+  margin: 0;
+  padding: 0;
 }
-.storyimg{
-  width: 100%;
- 
 
+.Space {
+  width: 200px;
 }
-.status{
-  width: 100%;
-  height: 100%;
- 
-  border: 2px solid white;
-} 
 
-
-.story-bar{
-
- 
-
-
- display: flex;
-  flex-wrap: nowrap;            
-  height: 120px;
-  width: 73%;   
-             
-  overflow-x: auto;            
-  overflow-y: hidden;          
-  margin: 20px auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-  gap: 30px;
+.story-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   align-items: center;
- 
-  
-  scroll-behavior: smooth; 
-  
-} 
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 16px 0;
+  gap: 10px;
+  max-width: 614px;
+  width: 100%;
+}
 
 .story-bar::-webkit-scrollbar {
-  display: none; 
-} 
+  display: none;
+}
+
+.story-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.story-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.story-avatar img {
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  display: block;
+}
+
+.story-username {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #262626;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 66px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Seen vs Unseen styling */
+.story-avatar-container.seen .story-avatar {
+  background: #c7c7c7; /* gray ring for seen */
+}
+
+/* ======= Desktop Styles ======= */
+@media (min-width: 769px) {
+  .story-container {
+    justify-content: center !important; 
+    margin: 0 auto;
+  }
+  
+  .story-bar {
+    padding: 16px 50px;
+    gap: 5px;
+  }
+  
+  .story-avatar {
+    width: 66px;
+    height: 66px;
+  }
+  
+  .story-avatar img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+  .story-container {
+    justify-content: center !important; 
+    margin: 0 auto;
+    /* background-color: #bc1888; */
+    margin-left: 65px;
+  }
+  
+  .story-bar {
+    padding: 16px 50px;
+    gap: 5px;
+  }
+  
+  .story-avatar {
+    width: 66px;
+    height: 66px;
+  }
+  
+  .story-avatar img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ======= Tablet Styles ======= */
+@media (max-width: 768px) and (min-width: 481px) {
+  .Space {
+    display: none; /* Hide the spacer on tablet */
+  }
+  
+  .story-bar {
+   
+    gap: 12px;
+    width: 100%;
+    max-width: 768px; /* Adjust max-width for tablet */
+  }
+  
+  .story-avatar {
+    width: 74px;
+    height: 74px;
+  }
+  
+  .story-avatar img {
+    width: 68px;
+    height: 68px;
+  }
+  
+  .story-container {
+ 
+    width: 100%;
+  }
+}
+
+/* ======= Mobile Styles ======= */
+@media (max-width: 480px) {
+  .story-bar {
+    padding: 8px 12px;
+    gap: 12px;
+  }
+  
+  .Space {
+    display: none;
+  }
+  
+  .story-avatar {
+    width: 74px;
+    height: 74px;
+  }
+  
+  .story-avatar img {
+    width: 68px;
+    height: 68px;
+  }
+  
+  /* story-container inherits flex-start from base rule */
+}

@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../Style/Story.css';
@@ -40,20 +42,23 @@ const Story = () => {
   };
 
   return (
+   <div className="story-container" >
+    <div className='Space'></div>
      <div className="story-bar">
-    {users.map((user) => (
-      <div
-        key={user.id}
-        className={`story-avatar-container ${seen.includes(user.id) ? 'seen' : 'unseen'}`}
-        onClick={() => handleStoryClick(user.id)}
-      >
-        <div className="story-avatar">
-          <img src={user.profilePic} alt={user.username} />
+      {users.map((user) => (
+        <div
+          key={user.id}
+          className={`story-avatar-container ${seen.includes(user.id) ? 'seen' : 'unseen'}`}
+          onClick={() => handleStoryClick(user.id)}
+        >
+          <div className="story-avatar">
+            <img src={user.profilePic} alt={user.username} />
+          </div>
+          <div className="story-username">{user.username}</div>
         </div>
-        <div className="story-username">{user.username}</div>
-      </div>
-    ))}
-  </div>
+      ))}
+    </div>
+   </div>
   );
 };
 

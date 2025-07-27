@@ -1,6 +1,28 @@
-// import React, { useState } from 'react';
-// import { Box } from '@mui/material';
-// import { Link } from 'react-router-dom';
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import {
+//   Box,
+//   Typography,
+//   useMediaQuery,
+//   useTheme,
+//   BottomNavigation,
+//   BottomNavigationAction,
+//   Dialog,
+//   DialogTitle,
+//   DialogContent,
+//   DialogContentText,
+//   DialogActions,
+//   Button,
+//   Popover,
+//   AppBar,
+//   Toolbar,
+//   IconButton,
+// } from '@mui/material';
+// import { useNavigate, useLocation } from 'react-router-dom';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 // import instagram from '../Assets/Instagram-Logo.png';
 // import HomeIcon from '@mui/icons-material/Home';
@@ -13,296 +35,11 @@
 // import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 // import { ReactComponent as ReelsIcon } from '../Assets/instagram-reels-icon (1).svg';
-// import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
-// import { ReactComponent as MessageIcon } from '../Assets/facebook-messenger-black-icon.svg';
-
-// import SearchSidebar from './SearchSidebar';
-// import '../Style/Navbar.css';
-
-// const navItems = [
-//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
-//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
-//   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
-//   { label: 'Reels', icon: <ReelsIcon style={{ height: 31, fill: 'black' }} />, path: '/reels' },
-//   { label: 'Messages', icon: <MessageIcon style={{ height: 31, fill: 'black' }} />, path: '/messages' },
-//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, path: '/notifications' },
-//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
-//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
-// ];
-
-// const belowNavItems = [
-//   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
-//   { label: 'Threads', icon: <ThreadsIcon style={{ height: 31, fill: 'black' }} />, path: '/threads' },
-//   { label: 'More', icon: <MenuOutlinedIcon />, path: '/more' },
-// ];
-
-// const Navbar = () => {
-//   const [openSearch, setOpenSearch] = useState(false);
-
-//   return (
-//     <>
-//       <Box
-//         sx={{
-//           flex: 0.35,
-//           bgcolor: 'white',
-//           color: 'black',
-//           alignItems: 'center',
-//           display: { xs: 'none', sm: 'none', md: 'flex' },
-//           height: '100vh',
-//           position: 'fixed',
-//           borderRight: '1px solid #ddd',
-//           width: openSearch ? '75px' : '245px',
-//           transition: 'width 0.3s ease',
-//           zIndex: 20
-//         }}
-//       >
-//         <Box width="100%">
-//           <Box sx={{ padding: '25px 20px' }}>
-//             <img src={instagram} alt="Instagram Logo" style={{ width: openSearch ? '30px' : '103px', cursor: 'pointer', transition: '0.3s' }} />
-//           </Box>
-
-//           <Box className="navlinkpart" sx={{ display: 'flex', flexDirection: 'column', gap: '5px', color: 'black' }}>
-//             {navItems.map(({ label, icon, path, isSearch }) => (
-//               <Box
-//                 key={label}
-//                 className="navlink"
-//                 onClick={() => {
-//                   if (isSearch) setOpenSearch(true);
-//                 }}
-//                 component={isSearch ? 'div' : Link}
-//                 to={isSearch ? undefined : path}
-//               >
-//                 <Box sx={{ marginRight: '9px', display: 'flex', alignItems: 'center', fontSize: '31px', color: 'black' }}>
-//                   {icon}
-//                 </Box>
-//                 {!openSearch && <Box className="navname">{label}</Box>}
-//               </Box>
-//             ))}
-
-//             <Box className="belowpart">
-//               {belowNavItems.map(({ label, icon, path }) => (
-//                 <Link key={label} to={path} className="navlink">
-//                   <Box sx={{ marginRight: '9px', display: 'flex', alignItems: 'center', fontSize: '31px', color: 'black' }}>
-//                     {icon}
-//                   </Box>
-//                   {!openSearch && <Box className="navname">{label}</Box>}
-//                 </Link>
-//               ))}
-//             </Box>
-//           </Box>
-//         </Box>
-//       </Box>
-
-//       <SearchSidebar open={openSearch} onClose={() => setOpenSearch(false)} />
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
-// import React, { useState } from 'react';
-// import { Box, IconButton, useMediaQuery, useTheme, BottomNavigation, BottomNavigationAction,Typography } from '@mui/material';
-// import { Link } from 'react-router-dom';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import instagram from '../Assets/Instagram-Logo.png';
-// import HomeIcon from '@mui/icons-material/Home';
-// import SearchIcon from '@mui/icons-material/Search';
-// import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
-// import { ReactComponent as ReelsIcon } from '../Assets/instagram-reels-icon (1).svg';
 // import { ReactComponent as MessageIcon } from '../Assets/facebook-messenger-black-icon.svg';
 // import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
-// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-// import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
-// import ProfileIcon from '@mui/icons-material/Person';
-// import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
 // import SearchSidebar from './SearchSidebar';
-// import '../Style/Navbar.css';
-
-// const navItems = [
-//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
-//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
-//   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
-//   { label: 'Reels', icon: <ReelsIcon style={{ height: 31, fill: 'black' }} />, path: '/reels' },
-//   { label: 'Messages', icon: <MessageIcon style={{ height: 31, fill: 'black' }} />, path: '/messages' },
-//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, path: '/notifications' },
-//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
-//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
-// ];
-
-// const belowNavItems = [
-//   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
-//   { label: 'Threads', icon: <ThreadsIcon style={{ height: 31, fill: 'black' }} />, path: '/threads' },
-//   { label: 'More', icon: <MenuOutlinedIcon />, path: '/more' },
-// ];
-
-// const Navbar = () => {
-//   const [openSearch, setOpenSearch] = useState(false);
-//   const theme = useTheme();
-//   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-//   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-//   const [activeTab, setActiveTab] = useState(0);
-
-//   const handleSearchToggle = () => {
-//     setOpenSearch(true);
-//   };
-
-//   const handleCloseSearch = () => {
-//     setOpenSearch(false);
-//   };
-
-//   const handleTabChange = (event, newValue) => {
-//     setActiveTab(newValue);
-//   };
-
-//   return (
-//     <>
-//       {/* Sidebar for md and up */}
-//       {!isMobile && (
-//         <Box
-//           sx={{
-//             flex: 0.35,
-//             bgcolor: 'white',
-//             color: '#262626',
-//             display: 'flex',
-//             height: '100vh',
-//             position: 'fixed',
-//             borderRight: '1px solid #dbdbdb',
-//             width: openSearch ? '75px' : '245px',
-//             transition: 'width 0.3s ease',
-//             zIndex: 20,
-//             overflow: 'hidden',
-//           }}
-//         >
-//           <Box width="100%">
-//             <Box sx={{ padding: '25px 20px', display: 'flex', justifyContent: openSearch ? 'center' : 'flex-start' }}>
-//               <img
-//                 src={instagram}
-//                 alt="Instagram Logo"
-//                 style={{
-//                   width: openSearch ? '30px' : '103px',
-//                   cursor: 'pointer',
-//                   transition: 'width 0.3s ease',
-//                 }}
-//               />
-//             </Box>
-
-//             <Box sx={{ display: 'flex', flexDirection: 'column', gap: '5px', color: '#262626', padding: '0 10px' }}>
-//               {navItems.map(({ label, icon, path, isSearch }, index) => (
-//                 <Box
-//                   key={label}
-//                   className="navlink"
-//                   onClick={() => {
-//                     if (isSearch) handleSearchToggle();
-//                   }}
-//                   component={isSearch ? 'div' : Link}
-//                   to={isSearch ? undefined : path}
-//                   sx={{
-//                     display: 'flex',
-//                     alignItems: 'center',
-//                     padding: '8px 12px',
-//                     borderRadius: '8px',
-//                     '&:hover': { bgcolor: '#fafafa' },
-//                     bgcolor: activeTab === index && !isSearch ? '#e9ecef' : 'transparent',
-//                     cursor: 'pointer',
-//                   }}
-//                   aria-label={`${label} navigation`}
-//                 >
-//                   <Box sx={{ marginRight: openSearch ? 0 : '12px', fontSize: '24px' }}>
-//                     {React.isValidElement(icon) ? React.cloneElement(icon, { sx: { color: '#262626' } }) : icon}
-//                   </Box>
-//                   {!openSearch && (
-//                     <Typography
-//                       className="navname"
-//                       sx={{ fontSize: '14px', fontWeight: 500, color: '#262626' }}
-//                     >
-//                       {label}
-//                     </Typography>
-//                   )}
-//                 </Box>
-//               ))}
-
-//               <Box sx={{ marginTop: 'auto' }}>
-//                 {belowNavItems.map(({ label, icon, path }, index) => (
-//                   <Link
-//                     key={label}
-//                     to={path}
-//                     className="navlink"
-//                     sx={{
-//                       display: 'flex',
-//                       alignItems: 'center',
-//                       padding: '8px 12px',
-//                       borderRadius: '8px',
-//                       '&:hover': { bgcolor: '#fafafa' },
-//                       bgcolor: activeTab === navItems.length + index ? '#e9ecef' : 'transparent',
-//                       textDecoration: 'none',
-//                       cursor: 'pointer',
-//                     }}
-//                     aria-label={`${label} navigation`}
-//                   >
-//                     <Box sx={{ marginRight: openSearch ? 0 : '12px', fontSize: '24px' }}>
-//                       {React.isValidElement(icon) ? React.cloneElement(icon, { sx: { color: '#262626' } }) : icon}
-//                     </Box>
-//                     {!openSearch && (
-//                       <Typography
-//                         className="navname"
-//                         sx={{ fontSize: '14px', fontWeight: 500, color: '#262626' }}
-//                       >
-//                         {label}
-//                       </Typography>
-//                     )}
-//                   </Link>
-//                 ))}
-//               </Box>
-//             </Box>
-//           </Box>
-//         </Box>
-//       )}
-
-//       {/* Bottom Navigation for sm and xs */}
-//       {isSmallScreen && (
-//         <BottomNavigation
-//           value={activeTab}
-//           onChange={handleTabChange}
-//           sx={{ width: '100%', position: 'fixed', bottom: 0, bgcolor: 'white', borderTop: '1px solid #dbdbdb', zIndex: 20 }}
-//         >
-//           {navItems.map((item, index) => (
-//             <BottomNavigationAction
-//               key={item.label}
-//               label={item.label}
-//               icon={React.isValidElement(item.icon) ? React.cloneElement(item.icon, { sx: { color: '#262626' } }) : item.icon}
-//               component={item.isSearch ? 'div' : Link}
-//               to={item.isSearch ? undefined : item.path}
-//               onClick={() => item.isSearch && handleSearchToggle()}
-//               sx={{ color: '#262626', '&.Mui-selected': { color: '#0095f6' } }}
-//             />
-//           ))}
-//         </BottomNavigation>
-//       )}
-
-//       <SearchSidebar open={openSearch} onClose={handleCloseSearch} />
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
-// import React, { useState } from 'react';
-// import { Box,  useMediaQuery, useTheme, BottomNavigation, BottomNavigationAction,Typography } from '@mui/material';
-// import { Link } from 'react-router-dom';
-// import instagram from '../Assets/Instagram-Logo.png';
-// import HomeIcon from '@mui/icons-material/Home';
-// import SearchIcon from '@mui/icons-material/Search';
-// import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
-// import { ReactComponent as ReelsIcon } from '../Assets/instagram-reels-icon (1).svg';
-// import { ReactComponent as MessageIcon } from '../Assets/facebook-messenger-black-icon.svg';
-// import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
-// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-// import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
-// import ProfileIcon from '@mui/icons-material/Person';
-// import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-// import SearchSidebar from './SearchSidebar';
+// import NotificationSidebar from './NotificationSidebar';
 // import '../Style/Navbar.css';
 
 // const navItems = [
@@ -311,7 +48,7 @@
 //   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
 //   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
 //   { label: 'Messages', icon: <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/messages' },
-//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, path: '/notifications' },
+//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, isNotification: true },
 //   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
 //   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
 // ];
@@ -319,187 +56,350 @@
 // const belowNavItems = [
 //   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
 //   { label: 'Threads', icon: <ThreadsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/threads' },
-//   { label: 'More', icon: <MenuOutlinedIcon />, path: '/more' },
+//   { label: 'More', icon: <MenuOutlinedIcon />, isMore: true },
+// ];
+
+// const mobileNavItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
 // ];
 
 // const Navbar = () => {
 //   const [openSearch, setOpenSearch] = useState(false);
+//   const [openNotification, setOpenNotification] = useState(false);
+//   const [anchorEl, setAnchorEl] = useState(null);
+//   const [openLogoutConfirm, setOpenLogoutConfirm] = useState(false);
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [isCollapsed, setIsCollapsed] = useState(false);
+
 //   const theme = useTheme();
 //   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 //   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-//   const [activeTab, setActiveTab] = useState(0);
+//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+//   const navigate = useNavigate();
+//   const location = useLocation();
+
+//   useEffect(() => {
+//     if (isMobile || isSmallScreen) {
+//       const currentPath = location.pathname;
+//       const mobileNavIndex = mobileNavItems.findIndex((item) => {
+//         if (item.path === currentPath) return true;
+//         if (item.isSearch && (currentPath.includes('/search') || openSearch)) return true;
+//         return false;
+//       });
+//       setActiveTab(mobileNavIndex !== -1 ? mobileNavIndex : 0);
+//     }
+//   }, [location.pathname, isMobile, isSmallScreen, openSearch]);
 
 //   const handleSearchToggle = () => {
-//     setOpenSearch(true);
+//     const newSearchState = !openSearch;
+//     setOpenSearch(newSearchState);
+//     setIsCollapsed(newSearchState);
+//     if (newSearchState && openNotification) setOpenNotification(false);
 //   };
 
-//   const handleCloseSearch = () => {
-//     setOpenSearch(false);
+//   const handleNotificationToggle = () => {
+//     const newNotificationState = !openNotification;
+//     setOpenNotification(newNotificationState);
+//     if (newNotificationState && openSearch) {
+//       setOpenSearch(false);
+//       setIsCollapsed(false);
+//     }
 //   };
 
-//   const handleTabChange = (event, newValue) => {
+//   const handleMoreClick = (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     setAnchorEl(event.currentTarget);
+//   };
+
+//   const handleMoreClose = () => setAnchorEl(null);
+
+//   const handleLogoutClick = () => {
+//     setOpenLogoutConfirm(true);
+//     handleMoreClose();
+//   };
+
+//   const handleLogoutConfirm = () => {
+//     try {
+//       localStorage.removeItem('loggedInUser');
+//       localStorage.removeItem('authToken');
+//       localStorage.removeItem('userSession');
+//       setOpenLogoutConfirm(false);
+//       toast.success('Logged out successfully!', { position: 'top-center', autoClose: 2000 });
+//       setTimeout(() => navigate('/login', { replace: true }), 2100);
+//     } catch (error) {
+//       console.error('Error during logout:', error);
+//       toast.error('Error logging out. Please try again.', { position: 'top-center', autoClose: 3000 });
+//     }
+//   };
+
+//   const handleLogoutCancel = () => setOpenLogoutConfirm(false);
+
+//   const handleNavigation = (path) => {
+//     if (path && typeof path === 'string') {
+//       try {
+//         navigate(path);
+//       } catch (error) {
+//         console.error('Navigation error:', error);
+//         toast.error('Navigation failed. Please try again.', { position: 'top-center', autoClose: 2000 });
+//       }
+//     }
+//   };
+
+//   const handleMobileNavChange = (event, newValue) => {
+//     if (newValue < 0 || newValue >= mobileNavItems.length) return;
 //     setActiveTab(newValue);
+//     const item = mobileNavItems[newValue];
+//     if (item.isSearch) handleSearchToggle();
+//     else if (item.path) handleNavigation(item.path);
 //   };
+
+//   const sidebarWidth = isCollapsed ? '75px' : '245px';
 
 //   return (
 //     <>
-//       {/* Sidebar for md and up */}
-//       {!isMobile && (
-//         <Box
-//           sx={{
-//             flex: 0.35,
-//             bgcolor: 'white',
-//             color: '#262626',
-//             display: 'flex',
-//             height: '100vh',
-//             position: 'fixed',
-//             borderRight: '1px solid #dbdbdb',
-//             width: openSearch ? '75px' : '245px',
-//             transition: 'width 0.3s ease-in-out',
-//             zIndex: 20,
-//             boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-//             overflow: 'hidden',
-//           }}
-//         >
-//           <Box width="100%">
-//             <Box sx={{ padding: '20px', display: 'flex', justifyContent: openSearch ? 'center' : 'flex-start',  }}>
-//               <img
-//                 src={instagram}
-//                 alt="Instagram Logo"
-//                 style={{
-//                   width: openSearch ? '30px' : '103px',
-//                   cursor: 'pointer',
-//                   transition: 'width 0.3s ease-in-out',
-//                 }}
-//               />
+//       {isSmallScreen && (
+//         <style jsx global>{`
+//           body {
+//             padding-top: 56px;
+//             padding-bottom: 50px;
+//           }
+//           .mobile-content {
+//             margin-top: 56px;
+//             margin-bottom: 50px;
+//             min-height: calc(100vh - 106px);
+//           }
+//         `}</style>
+//       )}
+
+//       {/* Desktop Sidebar */}
+//       {!isMobile && !isTablet && (
+//         <Box sx={{ width: sidebarWidth, bgcolor: 'white', position: 'fixed', height: '100vh', borderRight: '1px solid #dbdbdb', zIndex: 1200, transition: 'width 0.3s ease', overflow: 'hidden', }}>
+//           <Box sx={{ p: isCollapsed ? '25px 0' : '25px 24px', textAlign: isCollapsed ? 'center' : 'left' }}>
+//             <img src={instagram} alt="Instagram" style={{ width: isCollapsed ? '24px' : '103px', cursor: 'pointer', transition: 'width 0.3s ease' }} onClick={() => handleNavigation('/home')} />
+//           </Box>
+//          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+//         {navItems.map((item) => (
+//           <Box
+//             key={item.label}
+//             onClick={() => {
+//               if (item.isSearch) handleSearchToggle();
+//               else if (item.isNotification) handleNotificationToggle();
+//               else if (item.path) handleNavigation(item.path);
+//             }}
+//             sx={{
+//               p: isCollapsed ? '12px 0' : '12px 12px',
+//               cursor: 'pointer',
+//               display: 'flex',
+//               alignItems: 'center',
+//               justifyContent: isCollapsed ? 'center' : 'flex-start',
+//               borderRadius: '8px',
+//               margin: '0 8px',
+//               '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' },
+//             }}
+//           >
+//             <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//               {item.icon}
 //             </Box>
+//             {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//           </Box>
+//         ))}
+//       </Box>
 
-//             <Box sx={{ display: 'flex', flexDirection: 'column', gap: '4px', color: '#262626', padding: '10px 12px', pt: 2 }}>
-//               {navItems.map(({ label, icon, path, isSearch }, index) => (
-//                 <Box
-//                   key={label}
-//                   className="navlink"
-//                   onClick={() => {
-//                     if (isSearch) handleSearchToggle();
-//                   }}
-//                   component={isSearch ? 'div' : Link}
-//                   to={isSearch ? undefined : path}
-//                   sx={{
-//                     display: 'flex',
-//                     alignItems: 'center',
-//                     padding: '8px 12px',
-//                     borderRadius: '10px',
-//                     // '&:hover': { bgcolor: '#fafafa', transition: 'all 0.2s' },
-//                     // bgcolor: activeTab === index && !isSearch ? '#e9ecef' : 'transparent',
-//                     cursor: 'pointer',
-//                     transition: 'all 0.2s',
-//                   }}
-//                   aria-label={`${label} navigation`}
-//                 >
-//                   <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-//                     {React.isValidElement(icon) ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } }) : icon}
-//                   </Box>
-//                   {!openSearch && (
-//                     <Typography
-//                       className="navname"
-//                       sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}
-//                     >
-//                       {label}
-//                     </Typography>
-//                   )}
-//                 </Box>
-//               ))}
-
-//               <Box sx={{ marginTop: 'auto', mt: 4 }}>
-//                 {belowNavItems.map(({ label, icon, path }, index) => (
-//                   <Link
-//                     key={label}
-//                     to={path}
-//                     className="navlink"
-//                     sx={{
-//                       display: 'flex',
-//                       alignItems: 'center',
-//                       padding: '8px 12px',
-//                       borderRadius: '10px',
-//                       // '&:hover': { bgcolor: '#fafafa', transition: 'all 0.2s' },
-//                       // bgcolor: activeTab === navItems.length + index ? '#e9ecef' : 'transparent',
-//                       textDecoration: 'none',
-//                       cursor: 'pointer',
-//                       transition: 'all 0.2s',
-//                     }}
-//                     aria-label={`${label} navigation`}
-//                   >
-//                     <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-//                       {React.isValidElement(icon) ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } }) : icon}
-//                     </Box>
-//                     {!openSearch && (
-//                       <Typography
-//                         className="navname"
-//                         sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}
-//                       >
-//                         {label}
-//                       </Typography>
-//                     )}
-//                   </Link>
-//                 ))}
+//           <Box sx={{ position: 'absolute', bottom: 0, width: '100%', pb: 2 }}>
+//             {belowNavItems.map((item) => (
+//               <Box key={item.label} onClick={(e) => handleMoreClick(e)} sx={{ p: isCollapsed ? '12px 0' : '12px 12px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'flex-start', borderRadius: '8px', margin: '0 8px 4px', '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' } }}>
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>{item.icon}</Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
 //               </Box>
-//             </Box>
+//             ))}
 //           </Box>
 //         </Box>
 //       )}
 
-//       {/* Bottom Navigation for sm and xs */}
-//       {isSmallScreen && (
-//         <BottomNavigation
-//           value={activeTab}
-//           onChange={handleTabChange}
-//           sx={{
-//             width: '100%',
-//             position: 'fixed',
-//             bottom: 0,
-//             bgcolor: 'white',
-//             borderTop: '1px solid #dbdbdb',
-//             zIndex: 20,
-//             boxShadow: '0 -2px 5px rgba(0,0,0,0.1)',
-//           }}
-//         >
-//           {navItems.map((item, index) => (
-//             <BottomNavigationAction
-//               key={item.label}
-//               label={item.label}
-//               icon={React.isValidElement(item.icon) ? React.cloneElement(item.icon, { sx: { fontSize: 24, color: '#262626' } }) : item.icon}
-//               component={item.isSearch ? 'div' : Link}
-//               to={item.isSearch ? undefined : item.path}
-//               onClick={() => item.isSearch && handleSearchToggle()}
-//               sx={{
-//                 color: '#262626',
-//                 '&.Mui-selected': { color: '#0095f6' },
-//                 minWidth: 0,
-//                 padding: '6px 12px',
-//               }}
-//             />
-//           ))}
-//         </BottomNavigation>
+//       {/* Tablet Sidebar */}
+//       {isTablet && (
+//         <Box sx={{ width: '75px', bgcolor: 'white', position: 'fixed', height: '100vh', borderRight: '1px solid #dbdbdb', zIndex: 1200, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+//           <Box sx={{ p: '20px' }}>
+//             <img src={instagram} alt="Instagram" style={{ width: '24px', cursor: 'pointer' }} onClick={() => handleNavigation('/home')} />
+//           </Box>
+//           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+//             {navItems.map((item) => (
+//               <IconButton key={item.label} onClick={() => handleNavigation(item.path)} sx={{ margin: '4px 8px' }}>{item.icon}</IconButton>
+//             ))}
+//           </Box>
+//         </Box>
 //       )}
 
-//       <SearchSidebar open={openSearch} onClose={handleCloseSearch} />
+
+
+//       {/* Mobile Top Navbar */}
+// {isSmallScreen && (
+//   <>
+//     <AppBar
+//       position="fixed"
+//       sx={{
+//         top: 0,
+//         bgcolor: 'white',
+//         color: 'black',
+//         zIndex: 1300,
+//         boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+//         borderBottom: '1px solid #dbdbdb',
+//       }}
+//     >
+//       <Toolbar sx={{ minHeight: '56px !important', px: 2 }}>
+//         <img
+//           src={instagram}
+//           alt="Instagram"
+//           style={{ width: '103px', cursor: 'pointer', height: 'auto' }}
+//           onClick={() => handleNavigation('/home')}
+//         />
+//         <Box sx={{ flexGrow: 1 }} />
+//         <IconButton onClick={() => handleNotificationToggle()}>
+//           <FavoriteBorderOutlinedIcon />
+//         </IconButton>
+//         <IconButton onClick={() => handleNavigation('/messages')}>
+//           <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />
+//         </IconButton>
+//       </Toolbar>
+//     </AppBar>
+
+//     <BottomNavigation
+//       value={activeTab}
+//       onChange={handleMobileNavChange}
+//       showLabels={false}
+//       sx={{
+//         position: 'fixed',
+//         bottom: 0,
+//         left: 0,
+//         right: 0,
+//         padding: 0,
+//         margin: 0,
+//         width: '100%',
+//         maxWidth:'614px',
+//         display: 'flex',
+//         height: '50px',
+//         zIndex: 1300,
+//         borderTop: '1px solid #dbdbdb',
+//         backgroundColor: 'white',
+//       }}
+//     >
+//       {mobileNavItems.map((item, index) => (
+//         <BottomNavigationAction
+//           key={`${item.label}-${index}`}
+//           icon={React.cloneElement(item.icon, {
+//             style: {
+//               ...item.icon.props.style,
+//               fontSize: '24px',
+//               width: '24px',
+//               height: '24px',
+//             },
+//           })}
+//           sx={{ color: '#262626', '&.Mui-selected': { color: '#000' } }}
+//         />
+//       ))}
+//     </BottomNavigation>
+
+//     {/* Ensure main content is visible below AppBar */}
+//     <style jsx global>{`
+//       .mobile-content {
+//         margin-top: 56px;
+//         margin-bottom: 50px;
+//         min-height: calc(100vh - 106px);
+//       }
+//     `}</style>
+//   </>
+// )}
+
+
+//       {/* Sidebars and popovers */}
+//       <SearchSidebar open={openSearch} onClose={() => { setOpenSearch(false); setIsCollapsed(false); }} />
+//       <NotificationSidebar open={openNotification} onClose={() => setOpenNotification(false)} />
+
+//       {/* <Popover open={Boolean(anchorEl)} anchorEl={anchorEl} onClose={handleMoreClose} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} transformOrigin={{ vertical: 'bottom', horizontal: 'left' }}>
+//         <Box sx={{ p: 2, minWidth: '150px' }}>
+//           <Button fullWidth onClick={handleLogoutClick} sx={{ justifyContent: 'flex-start' }}>Log Out</Button>
+//         </Box>
+//       </Popover> */}
+
+
+//       <Popover
+//   open={Boolean(anchorEl)}
+//   anchorEl={anchorEl}
+//   onClose={handleMoreClose}
+//   anchorOrigin={{ vertical: 'top'}}
+//   transformOrigin={{ vertical: 'top'}}
+//   PaperProps={{
+//     sx: { borderRadius: 3, p: 1, minWidth: 200 },
+//   }}
+// >
+//   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Settings</Button>
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Your activity</Button>
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Saved</Button>
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Switch appearance</Button>
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Report a problem</Button>
+
+//     <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>Switch accounts</Button>
+
+//     <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//     <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }} onClick={handleLogoutClick}>
+//       Log out
+//     </Button>
+//   </Box>
+// </Popover>
+
+
+//       <Dialog open={openLogoutConfirm} onClose={handleLogoutCancel} maxWidth="sm" fullWidth>
+//         <DialogTitle sx={{ textAlign: 'center' }}>Log Out?</DialogTitle>
+//         <DialogContent><DialogContentText sx={{ textAlign: 'center' }}>Are you sure you want to log out of your account?</DialogContentText></DialogContent>
+//         <DialogActions sx={{ justifyContent: 'center', gap: 1, pb: 3 }}>
+//           <Button onClick={handleLogoutCancel} variant="outlined" sx={{ minWidth: '100px' }}>Cancel</Button>
+//           <Button onClick={handleLogoutConfirm} color="error" variant="contained" sx={{ minWidth: '100px' }}>Log Out</Button>
+//         </DialogActions>
+//       </Dialog>
+
+//       <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick pauseOnHover style={{ zIndex: 9999 }} />
 //     </>
 //   );
 // };
 
 // export default Navbar;
 
-// import React, { useState } from 'react';
+
+// import React, { useState, useEffect } from 'react';
 // import {
 //   Box,
+//   Typography,
 //   useMediaQuery,
 //   useTheme,
 //   BottomNavigation,
 //   BottomNavigationAction,
-//   Typography,
+//   Dialog,
+//   DialogTitle,
+//   DialogContent,
+//   DialogContentText,
+//   DialogActions,
+//   Button,
+//   Popover,
+//   AppBar,
+//   Toolbar,
+//   IconButton,
 // } from '@mui/material';
-// import { Link } from 'react-router-dom';
+// import { useNavigate, useLocation } from 'react-router-dom';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
+// // ================================
+// // ASSET IMPORTS
+// // ================================
 // import instagram from '../Assets/Instagram-Logo.png';
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
@@ -515,23 +415,18 @@
 // import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
 
 // import SearchSidebar from './SearchSidebar';
-// import NotificationSidebar from './NotificationSidebar'; // ✅ ADD THIS
+// import NotificationSidebar from './NotificationSidebar';
 // import '../Style/Navbar.css';
 
+// // ================================
+// // NAVIGATION CONFIGURATION
+// // ================================
 // const navItems = [
 //   { label: 'Home', icon: <HomeIcon />, path: '/home' },
 //   { label: 'Search', icon: <SearchIcon />, isSearch: true },
 //   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
-//   {
-//     label: 'Reels',
-//     icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />,
-//     path: '/reels',
-//   },
-//   {
-//     label: 'Messages',
-//     icon: <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />,
-//     path: '/messages',
-//   },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Messages', icon: <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/messages' },
 //   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, isNotification: true },
 //   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
 //   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
@@ -539,197 +434,480 @@
 
 // const belowNavItems = [
 //   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
-//   {
-//     label: 'Threads',
-//     icon: <ThreadsIcon style={{ width: 24, height: 24, fill: '#262626' }} />,
-//     path: '/threads',
-//   },
-//   { label: 'More', icon: <MenuOutlinedIcon />, path: '/more' },
+//   { label: 'Threads', icon: <ThreadsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/threads' },
+//   { label: 'More', icon: <MenuOutlinedIcon />, isMore: true },
 // ];
 
+// const mobileNavItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+// ];
+
+// // ================================
+// // MAIN COMPONENT
+// // ================================
 // const Navbar = () => {
+//   // ================================
+//   // STATE MANAGEMENT
+//   // ================================
 //   const [openSearch, setOpenSearch] = useState(false);
-//   const [openNotification, setOpenNotification] = useState(false); // ✅
+//   const [openNotification, setOpenNotification] = useState(false);
+//   const [anchorEl, setAnchorEl] = useState(null);
+//   const [openLogoutConfirm, setOpenLogoutConfirm] = useState(false);
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [isCollapsed, setIsCollapsed] = useState(false);
+
+//   // ================================
+//   // HOOKS & NAVIGATION
+//   // ================================
 //   const theme = useTheme();
 //   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 //   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-//   const [activeTab, setActiveTab] = useState(0);
+//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+//   const navigate = useNavigate();
+//   const location = useLocation();
 
-//   const handleSearchToggle = () => setOpenSearch(true);
-//   const handleCloseSearch = () => setOpenSearch(false);
-//   const handleCloseNotification = () => setOpenNotification(false); // ✅
+//   // ================================
+//   // EFFECTS
+//   // ================================
+//   useEffect(() => {
+//     if (isMobile || isSmallScreen) {
+//       const currentPath = location.pathname;
+//       const mobileNavIndex = mobileNavItems.findIndex((item) => {
+//         if (item.path === currentPath) return true;
+//         if (item.isSearch && (currentPath.includes('/search') || openSearch)) return true;
+//         return false;
+//       });
+//       setActiveTab(mobileNavIndex !== -1 ? mobileNavIndex : 0);
+//     }
+//   }, [location.pathname, isMobile, isSmallScreen, openSearch]);
 
-//   const handleTabChange = (event, newValue) => setActiveTab(newValue);
+//   // ================================
+//   // EVENT HANDLERS
+//   // ================================
+  
+//   // Search Toggle Handler
+//   const handleSearchToggle = () => {
+//     const newSearchState = !openSearch;
+//     setOpenSearch(newSearchState);
+//     setIsCollapsed(newSearchState);
+//     if (newSearchState && openNotification) setOpenNotification(false);
+//   };
 
+//   // Notification Toggle Handler
+//   const handleNotificationToggle = () => {
+//     const newNotificationState = !openNotification;
+//     setOpenNotification(newNotificationState);
+//     if (newNotificationState && openSearch) {
+//       setOpenSearch(false);
+//       setIsCollapsed(false);
+//     }
+//   };
+
+//   // More Menu Handlers
+//   const handleMoreClick = (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     setAnchorEl(event.currentTarget);
+//   };
+
+//   const handleMoreClose = () => setAnchorEl(null);
+
+//   // Logout Handlers
+//   const handleLogoutClick = () => {
+//     setOpenLogoutConfirm(true);
+//     handleMoreClose();
+//   };
+
+//   const handleLogoutConfirm = () => {
+//     try {
+//       localStorage.removeItem('loggedInUser');
+//       localStorage.removeItem('authToken');
+//       localStorage.removeItem('userSession');
+//       setOpenLogoutConfirm(false);
+//       toast.success('Logged out successfully!', { position: 'top-center', autoClose: 2000 });
+//       setTimeout(() => navigate('/login', { replace: true }), 2100);
+//     } catch (error) {
+//       console.error('Error during logout:', error);
+//       toast.error('Error logging out. Please try again.', { position: 'top-center', autoClose: 3000 });
+//     }
+//   };
+
+//   const handleLogoutCancel = () => setOpenLogoutConfirm(false);
+
+//   // Navigation Handler
+//   const handleNavigation = (path) => {
+//     if (path && typeof path === 'string') {
+//       try {
+//         navigate(path);
+//       } catch (error) {
+//         console.error('Navigation error:', error);
+//         toast.error('Navigation failed. Please try again.', { position: 'top-center', autoClose: 2000 });
+//       }
+//     }
+//   };
+
+//   // Mobile Navigation Handler
+//   const handleMobileNavChange = (event, newValue) => {
+//     if (newValue < 0 || newValue >= mobileNavItems.length) return;
+//     setActiveTab(newValue);
+//     const item = mobileNavItems[newValue];
+//     if (item.isSearch) handleSearchToggle();
+//     else if (item.path) handleNavigation(item.path);
+//   };
+
+//   // ================================
+//   // COMPUTED VALUES
+//   // ================================
+//   const sidebarWidth = isCollapsed ? '75px' : '245px';
+
+//   // ================================
+//   // RENDER FUNCTIONS
+//   // ================================
 //   return (
 //     <>
-//       {/* Sidebar for md and up */}
-//       {!isMobile && (
-//         <Box
-//           sx={{
-//             flex: 0.35,
-//             bgcolor: 'white',
-//             color: '#262626',
-//             display: 'flex',
-//             height: '100vh',
-//             position: 'fixed',
-//             borderRight: '1px solid #dbdbdb',
-//             width: openSearch ? '75px' : '245px',
-//             transition: 'width 0.3s ease-in-out',
-//             zIndex: 20,
-//             boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-//             overflow: 'hidden',
-//           }}
-//         >
-//           <Box width="100%">
-//             <Box
-//               sx={{
-//                 padding: '20px',
-//                 display: 'flex',
-//                 justifyContent: openSearch ? 'center' : 'flex-start',
-//               }}
-//             >
-//               <img
-//                 src={instagram}
-//                 alt="Instagram Logo"
-//                 style={{
-//                   width: openSearch ? '30px' : '103px',
-//                   cursor: 'pointer',
-//                   transition: 'width 0.3s ease-in-out',
+//       {/* ================================ */}
+//       {/* GLOBAL MOBILE STYLES */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <style jsx global>{`
+//           body {
+//             padding-top: 56px;
+//             padding-bottom: 50px;
+//           }
+//           .mobile-content {
+//             margin-top: 56px;
+//             margin-bottom: 50px;
+//             min-height: calc(100vh - 106px);
+//           }
+//         `}</style>
+//       )}
+
+//       {/* ================================ */}
+//       {/* DESKTOP SIDEBAR */}
+//       {/* ================================ */}
+//       {!isMobile && !isTablet && (
+//         <Box sx={{ 
+//           width: sidebarWidth, 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           transition: 'width 0.3s ease', 
+//           overflow: 'hidden', 
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ 
+//             p: isCollapsed ? '25px 0' : '25px 24px', 
+//             textAlign: isCollapsed ? 'center' : 'left' 
+//           }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ 
+//                 width: isCollapsed ? '24px' : '103px', 
+//                 cursor: 'pointer', 
+//                 transition: 'width 0.3s ease' 
+//               }} 
+//               onClick={() => handleNavigation('/home')} 
+//             />
+//           </Box>
+
+//           {/* Main Navigation Items */}
+//           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+//             {navItems.map((item) => (
+//               <Box
+//                 key={item.label}
+//                 onClick={() => {
+//                   if (item.isSearch) handleSearchToggle();
+//                   else if (item.isNotification) handleNotificationToggle();
+//                   else if (item.path) handleNavigation(item.path);
 //                 }}
-//               />
-//             </Box>
-
-//             <Box
-//               sx={{
-//                 display: 'flex',
-//                 flexDirection: 'column',
-//                 gap: '4px',
-//                 color: '#262626',
-//                 padding: '10px 12px',
-//                 pt: 2,
-//               }}
-//             >
-//               {navItems.map(({ label, icon, path, isSearch, isNotification }, index) => (
-//                 <Box
-//                   key={label}
-//                   className="navlink"
-//                   onClick={() => {
-//                     if (isSearch) handleSearchToggle();
-//                     if (isNotification) setOpenNotification(true);
-//                   }}
-//                   component={isSearch || isNotification ? 'div' : Link}
-//                   to={isSearch || isNotification ? undefined : path}
-//                   sx={{
-//                     display: 'flex',
-//                     alignItems: 'center',
-//                     padding: '8px 12px',
-//                     borderRadius: '10px',
-//                     cursor: 'pointer',
-//                     transition: 'all 0.2s',
-//                   }}
-//                   aria-label={`${label} navigation`}
-//                 >
-//                   <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-//                     {React.isValidElement(icon)
-//                       ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } })
-//                       : icon}
-//                   </Box>
-//                   {!openSearch && (
-//                     <Typography
-//                       className="navname"
-//                       sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}
-//                     >
-//                       {label}
-//                     </Typography>
-//                   )}
+//                 sx={{
+//                   p: isCollapsed ? '12px 0' : '12px 12px',
+//                   cursor: 'pointer',
+//                   display: 'flex',
+//                   alignItems: 'center',
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start',
+//                   borderRadius: '8px',
+//                   margin: '0 8px',
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' },
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
 //                 </Box>
-//               ))}
-
-//               <Box sx={{ marginTop: 'auto', mt: 4 }}>
-//                 {belowNavItems.map(({ label, icon, path }) => (
-//                   <Link
-//                     key={label}
-//                     to={path}
-//                     className="navlink"
-//                     style={{ textDecoration: 'none' }}
-//                     aria-label={`${label} navigation`}
-//                   >
-//                     <Box
-//                       sx={{
-//                         display: 'flex',
-//                         alignItems: 'center',
-//                         padding: '8px 12px',
-//                         borderRadius: '10px',
-//                         transition: 'all 0.2s',
-//                       }}
-//                     >
-//                       <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-//                         {React.isValidElement(icon)
-//                           ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } })
-//                           : icon}
-//                       </Box>
-//                       {!openSearch && (
-//                         <Typography
-//                           className="navname"
-//                           sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}
-//                         >
-//                           {label}
-//                         </Typography>
-//                       )}
-//                     </Box>
-//                   </Link>
-//                 ))}
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
 //               </Box>
-//             </Box>
+//             ))}
+//           </Box>
+
+//           {/* Bottom Navigation Items */}
+//           <Box sx={{ position: 'absolute', bottom: 0, width: '100%', pb: 2 }}>
+//             {belowNavItems.map((item) => (
+//               <Box 
+//                 key={item.label} 
+//                 onClick={(e) => handleMoreClick(e)} 
+//                 sx={{ 
+//                   p: isCollapsed ? '12px 0' : '12px 12px', 
+//                   cursor: 'pointer', 
+//                   display: 'flex', 
+//                   alignItems: 'center', 
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start', 
+//                   borderRadius: '8px', 
+//                   margin: '0 8px 4px', 
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' } 
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
+//                 </Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//               </Box>
+//             ))}
 //           </Box>
 //         </Box>
 //       )}
 
-//       {/* Bottom Navigation for sm and xs */}
-//       {isSmallScreen && (
-//         <BottomNavigation
-//           value={activeTab}
-//           onChange={handleTabChange}
-//           sx={{
-//             width: '100%',
-//             position: 'fixed',
-//             bottom: 0,
-//             bgcolor: 'white',
-//             borderTop: '1px solid #dbdbdb',
-//             zIndex: 20,
-//             boxShadow: '0 -2px 5px rgba(0,0,0,0.1)',
-//           }}
-//         >
-//           {navItems.map((item) => (
-//             <BottomNavigationAction
-//               key={item.label}
-//               label={item.label}
-//               icon={
-//                 React.isValidElement(item.icon)
-//                   ? React.cloneElement(item.icon, { sx: { fontSize: 24, color: '#262626' } })
-//                   : item.icon
-//               }
-//               component={item.isSearch || item.isNotification ? 'div' : Link}
-//               to={item.isSearch || item.isNotification ? undefined : item.path}
-//               onClick={() => {
-//                 if (item.isSearch) handleSearchToggle();
-//                 if (item.isNotification) setOpenNotification(true);
-//               }}
-//               sx={{
-//                 color: '#262626',
-//                 '&.Mui-selected': { color: '#0095f6' },
-//                 minWidth: 0,
-//                 padding: '6px 12px',
-//               }}
+//       {/* ================================ */}
+//       {/* TABLET SIDEBAR */}
+//       {/* ================================ */}
+//       {isTablet && (
+//         <Box sx={{ 
+//           width: '75px', 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           display: 'flex', 
+//           flexDirection: 'column', 
+//           alignItems: 'center' 
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ p: '20px' }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ width: '24px', cursor: 'pointer' }} 
+//               onClick={() => handleNavigation('/home')} 
 //             />
-//           ))}
-//         </BottomNavigation>
+//           </Box>
+
+//           {/* Navigation Items */}
+//           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+//             {navItems.map((item) => (
+//               <IconButton 
+//                 key={item.label} 
+//                 onClick={() => handleNavigation(item.path)} 
+//                 sx={{ margin: '4px 8px' }}
+//               >
+//                 {item.icon}
+//               </IconButton>
+//             ))}
+//           </Box>
+//         </Box>
 //       )}
 
-//       {/* Sidebars */}
-//       <SearchSidebar open={openSearch} onClose={handleCloseSearch} />
-//       <NotificationSidebar open={openNotification} onClose={handleCloseNotification} /> {/* ✅ */}
+//       {/* ================================ */}
+//       {/* MOBILE NAVIGATION */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <>
+//           {/* Top App Bar */}
+//           <AppBar
+//             position="fixed"
+//             sx={{
+//               top: 0,
+//               bgcolor: 'white',
+//               color: 'black',
+//               zIndex: 1300,
+//               boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+//               borderBottom: '1px solid #dbdbdb',
+//             }}
+//           >
+//             <Toolbar sx={{ minHeight: '56px !important', px: 2 }}>
+//               {/* Logo */}
+//               <img
+//                 src={instagram}
+//                 alt="Instagram"
+//                 style={{ width: '103px', cursor: 'pointer', height: 'auto' }}
+//                 onClick={() => handleNavigation('/home')}
+//               />
+//               <Box sx={{ flexGrow: 1 }} />
+              
+//               {/* Right Side Icons */}
+//               <IconButton onClick={() => handleNotificationToggle()}>
+//                 <FavoriteBorderOutlinedIcon />
+//               </IconButton>
+//               <IconButton onClick={() => handleNavigation('/messages')}>
+//                 <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />
+//               </IconButton>
+//             </Toolbar>
+//           </AppBar>
+
+//           {/* Bottom Navigation */}
+//           <BottomNavigation
+//             value={activeTab}
+//             onChange={handleMobileNavChange}
+//             showLabels={false}
+//             sx={{
+//               position: 'fixed',
+//               bottom: 0,
+//               left: 0,
+//               right: 0,
+//               padding: 0,
+//               margin: 0,
+//               width: '100%',
+//               maxWidth:'614px',
+//               display: 'flex',
+//               height: '50px',
+//               zIndex: 1300,
+//               borderTop: '1px solid #dbdbdb',
+//               backgroundColor: 'white',
+//             }}
+//           >
+//             {mobileNavItems.map((item, index) => (
+//               <BottomNavigationAction
+//                 key={`${item.label}-${index}`}
+//                 icon={React.cloneElement(item.icon, {
+//                   style: {
+//                     ...item.icon.props.style,
+//                     fontSize: '24px',
+//                     width: '24px',
+//                     height: '24px',
+//                   },
+//                 })}
+//                 sx={{ color: '#262626', '&.Mui-selected': { color: '#000' } }}
+//               />
+//             ))}
+//           </BottomNavigation>
+
+//           {/* Mobile Content Spacing Styles */}
+//           <style jsx global>{`
+//             .mobile-content {
+//               margin-top: 56px;
+//               margin-bottom: 50px;
+//               min-height: calc(100vh - 106px);
+//             }
+//           `}</style>
+//         </>
+//       )}
+
+//       {/* ================================ */}
+//       {/* SIDEBARS & OVERLAYS */}
+//       {/* ================================ */}
+//       <SearchSidebar 
+//         open={openSearch} 
+//         onClose={() => { 
+//           setOpenSearch(false); 
+//           setIsCollapsed(false); 
+//         }} 
+//       />
+//       <NotificationSidebar 
+//         open={openNotification} 
+//         onClose={() => setOpenNotification(false)} 
+//       />
+
+//       {/* ================================ */}
+//       {/* MORE MENU POPOVER */}
+//       {/* ================================ */}
+//       <Popover
+//         open={Boolean(anchorEl)}
+//         anchorEl={anchorEl}
+//         onClose={handleMoreClose}
+//         anchorOrigin={{ vertical: 'top'}}
+//         transformOrigin={{ vertical: 'top'}}
+//         PaperProps={{
+//           sx: { borderRadius: 3, p: 1, minWidth: 200 },
+//         }}
+//       >
+//         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Settings
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Your activity
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Saved
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Switch appearance
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Report a problem
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Switch accounts
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }} 
+//             onClick={handleLogoutClick}
+//           >
+//             Log out
+//           </Button>
+//         </Box>
+//       </Popover>
+
+//       {/* ================================ */}
+//       {/* LOGOUT CONFIRMATION DIALOG */}
+//       {/* ================================ */}
+//       <Dialog 
+//         open={openLogoutConfirm} 
+//         onClose={handleLogoutCancel} 
+//         maxWidth="sm" 
+//         fullWidth
+//       >
+//         <DialogTitle sx={{ textAlign: 'center' }}>
+//           Log Out?
+//         </DialogTitle>
+//         <DialogContent>
+//           <DialogContentText sx={{ textAlign: 'center' }}>
+//             Are you sure you want to log out of your account?
+//           </DialogContentText>
+//         </DialogContent>
+//         <DialogActions sx={{ justifyContent: 'center', gap: 1, pb: 3 }}>
+//           <Button 
+//             onClick={handleLogoutCancel} 
+//             variant="outlined" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Cancel
+//           </Button>
+//           <Button 
+//             onClick={handleLogoutConfirm} 
+//             color="error" 
+//             variant="contained" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Log Out
+//           </Button>
+//         </DialogActions>
+//       </Dialog>
+
+//       {/* ================================ */}
+//       {/* TOAST NOTIFICATIONS */}
+//       {/* ================================ */}
+//       <ToastContainer 
+//         position="top-center" 
+//         autoClose={3000} 
+//         hideProgressBar={false} 
+//         newestOnTop 
+//         closeOnClick 
+//         pauseOnHover 
+//         style={{ zIndex: 9999 }} 
+//       />
 //     </>
 //   );
 // };
@@ -738,9 +916,1161 @@
 
 
 
+// import React, { useState, useEffect } from 'react';
+// import {
+//   Box,
+//   Typography,
+//   useMediaQuery,
+//   useTheme,
+//   BottomNavigation,
+//   BottomNavigationAction,
+//   Dialog,
+//   DialogTitle,
+//   DialogContent,
+//   DialogContentText,
+//   DialogActions,
+//   Button,
+//   Popover,
+//   AppBar,
+//   Toolbar,
+//   IconButton,
+// } from '@mui/material';
+// import { useNavigate, useLocation } from 'react-router-dom';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// // ================================
+// // ASSET IMPORTS
+// // ================================
+// import instagram from '../Assets/Instagram-Logo.png';
+// import HomeIcon from '@mui/icons-material/Home';
+// import SearchIcon from '@mui/icons-material/Search';
+// import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+// import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
+// import ProfileIcon from '@mui/icons-material/Person';
+// import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
+// import { ReactComponent as ReelsIcon } from '../Assets/instagram-reels-icon (1).svg';
+// import { ReactComponent as MessageIcon } from '../Assets/facebook-messenger-black-icon.svg';
+// import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
+
+// import SearchSidebar from './SearchSidebar';
+// import NotificationSidebar from './NotificationSidebar';
+// import '../Style/Navbar.css';
+
+// // ================================
+// // NAVIGATION CONFIGURATION
+// // ================================
+// const navItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Messages', icon: <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/messages' },
+//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, isNotification: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+// ];
+
+// const belowNavItems = [
+//   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
+//   { label: 'Threads', icon: <ThreadsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/threads' },
+//   { label: 'More', icon: <MenuOutlinedIcon />, isMore: true },
+// ];
+
+// const mobileNavItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+// ];
+
+// // ================================
+// // MAIN COMPONENT
+// // ================================
+// const Navbar = () => {
+//   // ================================
+//   // STATE MANAGEMENT
+//   // ================================
+//   const [openSearch, setOpenSearch] = useState(false);
+//   const [openNotification, setOpenNotification] = useState(false);
+//   const [anchorEl, setAnchorEl] = useState(null);
+//   const [openLogoutConfirm, setOpenLogoutConfirm] = useState(false);
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [isCollapsed, setIsCollapsed] = useState(false);
+
+//   // ================================
+//   // HOOKS & NAVIGATION
+//   // ================================
+//   const theme = useTheme();
+//   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+//   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+//   const navigate = useNavigate();
+//   const location = useLocation();
+
+//   // ================================
+//   // EFFECTS
+//   // ================================
+//   useEffect(() => {
+//     if (isMobile || isSmallScreen) {
+//       const currentPath = location.pathname;
+//       const mobileNavIndex = mobileNavItems.findIndex((item) => {
+//         if (item.path === currentPath) return true;
+//         if (item.isSearch && (currentPath.includes('/search') || openSearch)) return true;
+//         return false;
+//       });
+//       setActiveTab(mobileNavIndex !== -1 ? mobileNavIndex : 0);
+//     }
+//   }, [location.pathname, isMobile, isSmallScreen, openSearch]);
+
+//   // ================================
+//   // EVENT HANDLERS
+//   // ================================
+  
+//   // Search Toggle Handler
+//   const handleSearchToggle = () => {
+//     const newSearchState = !openSearch;
+//     setOpenSearch(newSearchState);
+//     setIsCollapsed(newSearchState);
+//     if (newSearchState && openNotification) setOpenNotification(false);
+//   };
+
+//   // Notification Toggle Handler
+//   const handleNotificationToggle = () => {
+//     const newNotificationState = !openNotification;
+//     setOpenNotification(newNotificationState);
+//     if (newNotificationState && openSearch) {
+//       setOpenSearch(false);
+//       setIsCollapsed(false);
+//     }
+//   };
+
+//   // More Menu Handlers
+//   const handleMoreClick = (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     setAnchorEl(event.currentTarget);
+//   };
+
+//   const handleMoreClose = () => setAnchorEl(null);
+
+//   // Logout Handlers
+//   const handleLogoutClick = () => {
+//     setOpenLogoutConfirm(true);
+//     handleMoreClose();
+//   };
+
+//   const handleLogoutConfirm = () => {
+//     try {
+//       localStorage.removeItem('loggedInUser');
+//       localStorage.removeItem('authToken');
+//       localStorage.removeItem('userSession');
+//       setOpenLogoutConfirm(false);
+//       toast.success('Logged out successfully!', { position: 'top-center', autoClose: 2000 });
+//       setTimeout(() => navigate('/login', { replace: true }), 2100);
+//     } catch (error) {
+//       console.error('Error during logout:', error);
+//       toast.error('Error logging out. Please try again.', { position: 'top-center', autoClose: 3000 });
+//     }
+//   };
+
+//   const handleLogoutCancel = () => setOpenLogoutConfirm(false);
+
+//   // Navigation Handler
+//   const handleNavigation = (path) => {
+//     if (path && typeof path === 'string') {
+//       try {
+//         navigate(path);
+//       } catch (error) {
+//         console.error('Navigation error:', error);
+//         toast.error('Navigation failed. Please try again.', { position: 'top-center', autoClose: 2000 });
+//       }
+//     }
+//   };
+
+//   // Mobile Navigation Handler
+//   const handleMobileNavChange = (event, newValue) => {
+//     if (newValue < 0 || newValue >= mobileNavItems.length) return;
+//     setActiveTab(newValue);
+//     const item = mobileNavItems[newValue];
+//     if (item.isSearch) handleSearchToggle();
+//     else if (item.path) handleNavigation(item.path);
+//   };
+
+//   // ================================
+//   // COMPUTED VALUES
+//   // ================================
+//   const sidebarWidth = isCollapsed ? '75px' : '245px';
+
+//   // ================================
+//   // RENDER FUNCTIONS
+//   // ================================
+//   return (
+//     <>
+//       {/* ================================ */}
+//       {/* GLOBAL MOBILE STYLES */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <style jsx global>{`
+//           body {
+//             padding-top: 56px;
+//             padding-bottom: 50px;
+//           }
+//           .mobile-content {
+//             margin-top: 56px;
+//             margin-bottom: 50px;
+//             min-height: calc(100vh - 106px);
+//           }
+//         `}</style>
+//       )}
+
+//       {/* ================================ */}
+//       {/* DESKTOP SIDEBAR */}
+//       {/* ================================ */}
+//       {!isMobile && !isTablet && (
+//         <Box sx={{ 
+//           width: sidebarWidth, 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           // transition: 'width 0.3s ease', 
+//           overflow: 'hidden',
+//           display: 'flex',
+//           flexDirection: 'column'
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ 
+//             p: isCollapsed ? '25px 0' : '25px 24px', 
+//             textAlign: isCollapsed ? 'center' : 'left' 
+//           }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ 
+//                 width: isCollapsed ? '24px' : '103px', 
+//                 cursor: 'pointer', 
+//                 transition: 'width 0.3s ease' 
+//               }} 
+//               onClick={() => handleNavigation('/home')} 
+//             />
+//           </Box>
+
+//           {/* Main Navigation Items */}
+//           <Box sx={{ 
+//             display: 'flex', 
+//             flexDirection: 'column', 
+//             gap: 1,
+//             flex: 1,
+//             overflow: 'auto'
+//           }}>
+//             {navItems.map((item) => (
+//               <Box
+//                 key={item.label}
+//                 onClick={() => {
+//                   if (item.isSearch) handleSearchToggle();
+//                   else if (item.isNotification) handleNotificationToggle();
+//                   else if (item.path) handleNavigation(item.path);
+//                 }}
+//                 sx={{
+//                   p: isCollapsed ? '12px 0' : '12px 12px',
+//                   cursor: 'pointer',
+//                   display: 'flex',
+//                   alignItems: 'center',
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start',
+//                   borderRadius: '8px',
+//                   margin: '0 8px',
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' },
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
+//                 </Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//               </Box>
+//             ))}
+//           </Box>
+
+//           {/* Bottom Navigation Items */}
+//           <Box sx={{ 
+//             marginTop: 'auto', 
+//             width: '100%', 
+//             pb: 2,
+//             pt: 2,
+//             borderTop: '1px solid rgba(0,0,0,0.05)',
+//             mt: 2
+//           }}>
+//             {belowNavItems.map((item) => (
+//               <Box 
+//                 key={item.label} 
+//                 onClick={(e) => handleMoreClick(e)} 
+//                 sx={{ 
+//                   p: isCollapsed ? '12px 0' : '12px 12px', 
+//                   cursor: 'pointer', 
+//                   display: 'flex', 
+//                   alignItems: 'center', 
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start', 
+//                   borderRadius: '8px', 
+//                   margin: '0 8px 4px', 
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' } 
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
+//                 </Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//               </Box>
+//             ))}
+//           </Box>
+//         </Box>
+//       )}
+
+//       {/* ================================ */}
+//       {/* TABLET SIDEBAR */}
+//       {/* ================================ */}
+//       {isTablet && (
+//         <Box sx={{ 
+//           width: '75px', 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           display: 'flex', 
+//           flexDirection: 'column', 
+//           alignItems: 'center' 
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ p: '20px' }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ width: '24px', cursor: 'pointer' }} 
+//               onClick={() => handleNavigation('/home')} 
+//             />
+//           </Box>
+
+//           {/* Navigation Items */}
+//           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+//             {navItems.map((item) => (
+//               <IconButton 
+//                 key={item.label} 
+//                 onClick={() => handleNavigation(item.path)} 
+//                 sx={{ margin: '4px 8px' }}
+//               >
+//                 {item.icon}
+//               </IconButton>
+//             ))}
+//           </Box>
+//         </Box>
+//       )}
+
+//       {/* ================================ */}
+//       {/* MOBILE NAVIGATION */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <>
+//           {/* Top App Bar */}
+//           <AppBar
+//             position="fixed"
+//             sx={{
+//               top: 0,
+//               bgcolor: 'white',
+//               color: 'black',
+//               zIndex: 1300,
+//               boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+//               borderBottom: '1px solid #dbdbdb',
+//             }}
+//           >
+//             <Toolbar sx={{ minHeight: '56px !important', px: 2 }}>
+//               {/* Logo */}
+//               <img
+//                 src={instagram}
+//                 alt="Instagram"
+//                 style={{ width: '103px', cursor: 'pointer', height: 'auto' }}
+//                 onClick={() => handleNavigation('/home')}
+//               />
+//               <Box sx={{ flexGrow: 1 }} />
+              
+//               {/* Right Side Icons */}
+//               <IconButton onClick={() => handleNotificationToggle()}>
+//                 <FavoriteBorderOutlinedIcon />
+//               </IconButton>
+//               <IconButton onClick={() => handleNavigation('/messages')}>
+//                 <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />
+//               </IconButton>
+//             </Toolbar>
+//           </AppBar>
+
+//           {/* Bottom Navigation */}
+//           <BottomNavigation
+//             value={activeTab}
+//             onChange={handleMobileNavChange}
+//             showLabels={false}
+//             sx={{
+//               position: 'fixed',
+//               bottom: 0,
+//               left: 0,
+//               right: 0,
+//               padding: 0,
+//               margin: 0,
+//               width: '100%',
+//               maxWidth:'614px',
+//               display: 'flex',
+//               height: '50px',
+//               zIndex: 1300,
+//               borderTop: '1px solid #dbdbdb',
+//               backgroundColor: 'white',
+//             }}
+//           >
+//             {mobileNavItems.map((item, index) => (
+//               <BottomNavigationAction
+//                 key={`${item.label}-${index}`}
+//                 icon={React.cloneElement(item.icon, {
+//                   style: {
+//                     ...item.icon.props.style,
+//                     fontSize: '24px',
+//                     width: '24px',
+//                     height: '24px',
+//                   },
+//                 })}
+//                 sx={{ color: '#262626', '&.Mui-selected': { color: '#000' } }}
+//               />
+//             ))}
+//           </BottomNavigation>
+
+//           {/* Mobile Content Spacing Styles */}
+//           <style jsx global>{`
+//             .mobile-content {
+//               margin-top: 56px;
+//               margin-bottom: 50px;
+//               min-height: calc(100vh - 106px);
+//             }
+//           `}</style>
+//         </>
+//       )}
+
+//       {/* ================================ */}
+//       {/* SIDEBARS & OVERLAYS */}
+//       {/* ================================ */}
+//       <SearchSidebar 
+//         open={openSearch} 
+//         onClose={() => { 
+//           setOpenSearch(false); 
+//           setIsCollapsed(false); 
+//         }} 
+//       />
+//       <NotificationSidebar 
+//         open={openNotification} 
+//         onClose={() => setOpenNotification(false)} 
+//       />
+
+//       {/* ================================ */}
+//       {/* MORE MENU POPOVER */}
+//       {/* ================================ */}
+//       <Popover
+//         open={Boolean(anchorEl)}
+//         anchorEl={anchorEl}
+//         onClose={handleMoreClose}
+//         anchorOrigin={{ vertical: 'top'}}
+//         transformOrigin={{ vertical: 'top'}}
+//         PaperProps={{
+//           sx: { borderRadius: 3, p: 1, minWidth: 200 },
+//         }}
+//       >
+//         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Settings
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Your activity
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Saved
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Switch appearance
+//           </Button>
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Report a problem
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }}>
+//             Switch accounts
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1 }} 
+//             onClick={handleLogoutClick}
+//           >
+//             Log out
+//           </Button>
+//         </Box>
+//       </Popover>
+
+//       {/* ================================ */}
+//       {/* LOGOUT CONFIRMATION DIALOG */}
+//       {/* ================================ */}
+//       <Dialog 
+//         open={openLogoutConfirm} 
+//         onClose={handleLogoutCancel} 
+//         maxWidth="sm" 
+//         fullWidth
+//       >
+//         <DialogTitle sx={{ textAlign: 'center' }}>
+//           Log Out?
+//         </DialogTitle>
+//         <DialogContent>
+//           <DialogContentText sx={{ textAlign: 'center' }}>
+//             Are you sure you want to log out of your account?
+//           </DialogContentText>
+//         </DialogContent>
+//         <DialogActions sx={{ justifyContent: 'center', gap: 1, pb: 3 }}>
+//           <Button 
+//             onClick={handleLogoutCancel} 
+//             variant="outlined" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Cancel
+//           </Button>
+//           <Button 
+//             onClick={handleLogoutConfirm} 
+//             color="error" 
+//             variant="contained" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Log Out
+//           </Button>
+//         </DialogActions>
+//       </Dialog>
+
+//       {/* ================================ */}
+//       {/* TOAST NOTIFICATIONS */}
+//       {/* ================================ */}
+//       <ToastContainer 
+//         position="top-center" 
+//         autoClose={3000} 
+//         hideProgressBar={false} 
+//         newestOnTop 
+//         closeOnClick 
+//         pauseOnHover 
+//         style={{ zIndex: 9999 }} 
+//       />
+//     </>
+//   );
+// };
+
+// export default Navbar;
 
 
-import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
+// import {
+//   Box,
+//   Typography,
+//   useMediaQuery,
+//   useTheme,
+//   BottomNavigation,
+//   BottomNavigationAction,
+//   Dialog,
+//   DialogTitle,
+//   DialogContent,
+//   DialogContentText,
+//   DialogActions,
+//   Button,
+//   Popover,
+//   AppBar,
+//   Toolbar,
+//   IconButton,
+// } from '@mui/material';
+// import { useNavigate, useLocation } from 'react-router-dom';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// // ================================
+// // ASSET IMPORTS
+// // ================================
+// import instagram from '../Assets/Instagram-Logo.png';
+// import HomeIcon from '@mui/icons-material/Home';
+// import SearchIcon from '@mui/icons-material/Search';
+// import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+// import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
+// import ProfileIcon from '@mui/icons-material/Person';
+// import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
+// import { ReactComponent as ReelsIcon } from '../Assets/instagram-reels-icon (1).svg';
+// import { ReactComponent as MessageIcon } from '../Assets/facebook-messenger-black-icon.svg';
+// import { ReactComponent as ThreadsIcon } from '../Assets/threads-icon.svg';
+
+// import SearchSidebar from './SearchSidebar';
+// import NotificationSidebar from './NotificationSidebar';
+// import '../Style/Navbar.css';
+
+// // ================================
+// // NAVIGATION CONFIGURATION
+// // ================================
+// const navItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Explore', icon: <ExploreOutlinedIcon />, path: '/explore' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Messages', icon: <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/messages' },
+//   { label: 'Notifications', icon: <FavoriteBorderOutlinedIcon />, isNotification: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+// ];
+
+// const belowNavItems = [
+//   { label: 'Meta AI', icon: <CircleOutlinedIcon />, path: '/meta-ai' },
+//   { label: 'Threads', icon: <ThreadsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/threads' },
+//   { label: 'More', icon: <MenuOutlinedIcon />, isMore: true },
+// ];
+
+// const mobileNavItems = [
+//   { label: 'Home', icon: <HomeIcon />, path: '/home' },
+//   { label: 'Search', icon: <SearchIcon />, isSearch: true },
+//   { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+//   { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+//   { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+// ];
+
+// // ================================
+// // MAIN COMPONENT
+// // ================================
+// const Navbar = () => {
+//   // ================================
+//   // STATE MANAGEMENT
+//   // ================================
+//   const [openSearch, setOpenSearch] = useState(false);
+//   const [openNotification, setOpenNotification] = useState(false);
+//   const [anchorEl, setAnchorEl] = useState(null);
+//   const [openLogoutConfirm, setOpenLogoutConfirm] = useState(false);
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [isCollapsed, setIsCollapsed] = useState(false);
+
+//   // ================================
+//   // HOOKS & NAVIGATION
+//   // ================================
+//   const theme = useTheme();
+//   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+//   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+//   const navigate = useNavigate();
+//   const location = useLocation();
+
+//   // ================================
+//   // EFFECTS
+//   // ================================
+//   useEffect(() => {
+//     if (isMobile || isSmallScreen) {
+//       const currentPath = location.pathname;
+//       const mobileNavIndex = mobileNavItems.findIndex((item) => {
+//         if (item.path === currentPath) return true;
+//         if (item.isSearch && (currentPath.includes('/search') || openSearch)) return true;
+//         return false;
+//       });
+//       setActiveTab(mobileNavIndex !== -1 ? mobileNavIndex : 0);
+//     }
+//   }, [location.pathname, isMobile, isSmallScreen, openSearch]);
+
+//   // ================================
+//   // EVENT HANDLERS
+//   // ================================
+  
+//   // Search Toggle Handler
+//   const handleSearchToggle = () => {
+//     const newSearchState = !openSearch;
+//     setOpenSearch(newSearchState);
+//     setIsCollapsed(newSearchState);
+//     if (newSearchState && openNotification) setOpenNotification(false);
+//   };
+
+//   // Notification Toggle Handler
+//   const handleNotificationToggle = () => {
+//     const newNotificationState = !openNotification;
+//     setOpenNotification(newNotificationState);
+//     if (newNotificationState && openSearch) {
+//       setOpenSearch(false);
+//       setIsCollapsed(false);
+//     }
+//   };
+
+//   // More Menu Handlers
+//   const handleMoreClick = (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     setAnchorEl(event.currentTarget);
+//   };
+
+//   const handleMoreClose = () => setAnchorEl(null);
+
+//   // Logout Handlers
+//   const handleLogoutClick = () => {
+//     setOpenLogoutConfirm(true);
+//     handleMoreClose();
+//   };
+
+//   const handleLogoutConfirm = () => {
+//     try {
+//       localStorage.removeItem('loggedInUser');
+//       localStorage.removeItem('authToken');
+//       localStorage.removeItem('userSession');
+//       setOpenLogoutConfirm(false);
+//       toast.success('Logged out successfully!', { position: 'top-center', autoClose: 2000 });
+//       setTimeout(() => navigate('/login', { replace: true }), 2100);
+//     } catch (error) {
+//       console.error('Error during logout:', error);
+//       toast.error('Error logging out. Please try again.', { position: 'top-center', autoClose: 3000 });
+//     }
+//   };
+
+//   const handleLogoutCancel = () => setOpenLogoutConfirm(false);
+
+//   // Navigation Handler
+//   const handleNavigation = (path) => {
+//     if (path && typeof path === 'string') {
+//       try {
+//         navigate(path);
+//       } catch (error) {
+//         console.error('Navigation error:', error);
+//         toast.error('Navigation failed. Please try again.', { position: 'top-center', autoClose: 2000 });
+//       }
+//     }
+//   };
+
+//   // Mobile Navigation Handler
+//   const handleMobileNavChange = (event, newValue) => {
+//     if (newValue < 0 || newValue >= mobileNavItems.length) return;
+//     setActiveTab(newValue);
+//     const item = mobileNavItems[newValue];
+//     if (item.isSearch) handleSearchToggle();
+//     else if (item.path) handleNavigation(item.path);
+//   };
+
+//   // ================================
+//   // COMPUTED VALUES
+//   // ================================
+//   const sidebarWidth = isCollapsed ? '75px' : '245px';
+
+//   // ================================
+//   // RENDER FUNCTIONS
+//   // ================================
+//   return (
+//     <>
+//       {/* ================================ */}
+//       {/* GLOBAL MOBILE STYLES */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <style jsx global>{`
+//           body {
+//             padding-top: 56px;
+//             padding-bottom: 50px;
+//           }
+//           .mobile-content {
+//             margin-top: 56px;
+//             margin-bottom: 50px;
+//             min-height: calc(100vh - 106px);
+//           }
+//         `}</style>
+//       )}
+
+//       {/* ================================ */}
+//       {/* DESKTOP SIDEBAR */}
+//       {/* ================================ */}
+//       {!isMobile && !isTablet && (
+//         <Box sx={{ 
+//           width: sidebarWidth, 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           transition: 'width 0.3s ease', 
+//           overflow: 'hidden',
+//           display: 'flex',
+//           flexDirection: 'column'
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ 
+//             p: isCollapsed ? '25px 0' : '25px 24px', 
+//             textAlign: isCollapsed ? 'center' : 'left' 
+//           }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ 
+//                 width: isCollapsed ? '24px' : '103px', 
+//                 cursor: 'pointer', 
+//                 transition: 'width 0.3s ease' 
+//               }} 
+//               onClick={() => handleNavigation('/home')} 
+//             />
+//           </Box>
+
+//           {/* Main Navigation Items */}
+//           <Box sx={{ 
+//             display: 'flex', 
+//             flexDirection: 'column', 
+//             gap: 1,
+//             flex: 1,
+//             overflow: 'auto',
+//             // Hide scrollbar for all browsers
+//             '&::-webkit-scrollbar': {
+//               display: 'none'
+//             },
+//             '-ms-overflow-style': 'none',  // IE and Edge
+//             'scrollbar-width': 'none'      // Firefox
+//           }}>
+//             {navItems.map((item) => (
+//               <Box
+//                 key={item.label}
+//                 onClick={() => {
+//                   if (item.isSearch) handleSearchToggle();
+//                   else if (item.isNotification) handleNotificationToggle();
+//                   else if (item.path) handleNavigation(item.path);
+//                 }}
+//                 sx={{
+//                   p: isCollapsed ? '12px 0' : '12px 12px',
+//                   cursor: 'pointer',
+//                   display: 'flex',
+//                   alignItems: 'center',
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start',
+//                   borderRadius: '8px',
+//                   margin: '0 8px',
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' },
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
+//                 </Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//               </Box>
+//             ))}
+//           </Box>
+
+//           {/* Bottom Navigation Items */}
+//           <Box sx={{ 
+//             marginTop: 'auto', 
+//             width: '100%', 
+//             pb: 2,
+//             pt: 2,
+//             borderTop: '1px solid rgba(0,0,0,0.05)',
+//             mt: 2
+//           }}>
+//             {belowNavItems.map((item) => (
+//               <Box 
+//                 key={item.label} 
+//                 onClick={(e) => {
+//                   if (item.isMore) {
+//                     handleMoreClick(e);
+//                   } else if (item.path) {
+//                     handleNavigation(item.path);
+//                   }
+//                 }}
+//                 sx={{ 
+//                   p: isCollapsed ? '12px 0' : '12px 12px', 
+//                   cursor: 'pointer', 
+//                   display: 'flex', 
+//                   alignItems: 'center', 
+//                   justifyContent: isCollapsed ? 'center' : 'flex-start', 
+//                   borderRadius: '8px', 
+//                   margin: '0 8px 4px', 
+//                   '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' } 
+//                 }}
+//               >
+//                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+//                   {item.icon}
+//                 </Box>
+//                 {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+//               </Box>
+//             ))}
+//           </Box>
+//         </Box>
+//       )}
+
+//       {/* ================================ */}
+//       {/* TABLET SIDEBAR */}
+//       {/* ================================ */}
+//       {isTablet && (
+//         <Box sx={{ 
+//           width: '75px', 
+//           bgcolor: 'white', 
+//           position: 'fixed', 
+//           height: '100vh', 
+//           borderRight: '1px solid #dbdbdb', 
+//           zIndex: 1200, 
+//           display: 'flex', 
+//           flexDirection: 'column', 
+//           alignItems: 'center' 
+//         }}>
+//           {/* Logo Section */}
+//           <Box sx={{ p: '20px' }}>
+//             <img 
+//               src={instagram} 
+//               alt="Instagram" 
+//               style={{ width: '24px', cursor: 'pointer' }} 
+//               onClick={() => handleNavigation('/home')} 
+//             />
+//           </Box>
+
+//           {/* Navigation Items */}
+//           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+//             {navItems.map((item) => (
+//               <IconButton 
+//                 key={item.label} 
+//                 onClick={() => handleNavigation(item.path)} 
+//                 sx={{ margin: '4px 8px' }}
+//               >
+//                 {item.icon}
+//               </IconButton>
+//             ))}
+//           </Box>
+//         </Box>
+//       )}
+
+//       {/* ================================ */}
+//       {/* MOBILE NAVIGATION */}
+//       {/* ================================ */}
+//       {isSmallScreen && (
+//         <>
+//           {/* Top App Bar */}
+//           <AppBar
+//             position="fixed"
+//             sx={{
+//               top: 0,
+//               bgcolor: 'white',
+//               color: 'black',
+//               zIndex: 1300,
+//               boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+//               borderBottom: '1px solid #dbdbdb',
+//             }}
+//           >
+//             <Toolbar sx={{ minHeight: '56px !important', px: 2 }}>
+//               {/* Logo */}
+//               <img
+//                 src={instagram}
+//                 alt="Instagram"
+//                 style={{ width: '103px', cursor: 'pointer', height: 'auto' }}
+//                 onClick={() => handleNavigation('/home')}
+//               />
+//               <Box sx={{ flexGrow: 1 }} />
+              
+//               {/* Right Side Icons */}
+//               <IconButton onClick={() => handleNotificationToggle()}>
+//                 <FavoriteBorderOutlinedIcon />
+//               </IconButton>
+//               <IconButton onClick={() => handleNavigation('/messages')}>
+//                 <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />
+//               </IconButton>
+//             </Toolbar>
+//           </AppBar>
+
+//           {/* Bottom Navigation */}
+//           <BottomNavigation
+//             value={activeTab}
+//             onChange={handleMobileNavChange}
+//             showLabels={false}
+//             sx={{
+//               position: 'fixed',
+//               bottom: 0,
+//               left: 0,
+//               right: 0,
+//               padding: 0,
+//               margin: 0,
+//               width: '100%',
+//               maxWidth:'614px',
+//               display: 'flex',
+//               height: '50px',
+//               zIndex: 1300,
+//               borderTop: '1px solid #dbdbdb',
+//               backgroundColor: 'white',
+//             }}
+//           >
+//             {mobileNavItems.map((item, index) => (
+//               <BottomNavigationAction
+//                 key={`${item.label}-${index}`}
+//                 icon={React.cloneElement(item.icon, {
+//                   style: {
+//                     ...item.icon.props.style,
+//                     fontSize: '24px',
+//                     width: '24px',
+//                     height: '24px',
+//                   },
+//                 })}
+//                 sx={{ color: '#262626', '&.Mui-selected': { color: '#000' } }}
+//               />
+//             ))}
+//           </BottomNavigation>
+
+//           {/* Mobile Content Spacing Styles */}
+//           <style jsx global>{`
+//             .mobile-content {
+//               margin-top: 56px;
+//               margin-bottom: 50px;
+//               min-height: calc(100vh - 106px);
+//             }
+//           `}</style>
+//         </>
+//       )}
+
+//       {/* ================================ */}
+//       {/* SIDEBARS & OVERLAYS */}
+//       {/* ================================ */}
+//       <SearchSidebar 
+//         open={openSearch} 
+//         onClose={() => { 
+//           setOpenSearch(false); 
+//           setIsCollapsed(false); 
+//         }} 
+//       />
+//       <NotificationSidebar 
+//         open={openNotification} 
+//         onClose={() => setOpenNotification(false)} 
+//       />
+
+//       {/* ================================ */}
+//       {/* MORE MENU POPOVER */}
+//       {/* ================================ */}
+//       <Popover
+//         open={Boolean(anchorEl)}
+//         anchorEl={anchorEl}
+//         onClose={handleMoreClose}
+//         anchorOrigin={{ vertical: 'top', horizontal: 'right'}}
+//         transformOrigin={{ vertical: 'bottom', horizontal: 'left'}}
+//         disableScrollLock={true}
+//         PaperProps={{
+//           sx: { 
+//             borderRadius: 3, 
+//             p: 1, 
+//             minWidth: 200,
+//             boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+//             border: '1px solid #dbdbdb'
+//           },
+//         }}
+//         sx={{
+//           '& .MuiBackdrop-root': {
+//             backgroundColor: 'transparent'
+//           }
+//         }}
+//       >
+//         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Settings
+//           </Button>
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Your activity
+//           </Button>
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Saved
+//           </Button>
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Switch appearance
+//           </Button>
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Report a problem
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+//             onClick={handleMoreClose}
+//           >
+//             Switch accounts
+//           </Button>
+
+//           <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+//           <Button 
+//             sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }} 
+//             onClick={handleLogoutClick}
+//           >
+//             Log out
+//           </Button>
+//         </Box>
+//       </Popover>
+
+//       {/* ================================ */}
+//       {/* LOGOUT CONFIRMATION DIALOG */}
+//       {/* ================================ */}
+//       <Dialog 
+//         open={openLogoutConfirm} 
+//         onClose={handleLogoutCancel} 
+//         maxWidth="sm" 
+//         fullWidth
+//       >
+//         <DialogTitle sx={{ textAlign: 'center' }}>
+//           Log Out?
+//         </DialogTitle>
+//         <DialogContent>
+//           <DialogContentText sx={{ textAlign: 'center' }}>
+//             Are you sure you want to log out of your account?
+//           </DialogContentText>
+//         </DialogContent>
+//         <DialogActions sx={{ justifyContent: 'center', gap: 1, pb: 3 }}>
+//           <Button 
+//             onClick={handleLogoutCancel} 
+//             variant="outlined" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Cancel
+//           </Button>
+//           <Button 
+//             onClick={handleLogoutConfirm} 
+//             color="error" 
+//             variant="contained" 
+//             sx={{ minWidth: '100px' }}
+//           >
+//             Log Out
+//           </Button>
+//         </DialogActions>
+//       </Dialog>
+
+//       {/* ================================ */}
+//       {/* TOAST NOTIFICATIONS */}
+//       {/* ================================ */}
+//       <ToastContainer 
+//         position="top-center" 
+//         autoClose={3000} 
+//         hideProgressBar={false} 
+//         newestOnTop 
+//         closeOnClick 
+//         pauseOnHover 
+//         style={{ zIndex: 9999 }} 
+//       />
+//     </>
+//   );
+// };
+
+// export default Navbar;
+
+
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Typography,
@@ -755,11 +2085,17 @@ import {
   DialogActions,
   Button,
   Popover,
+  AppBar,
+  Toolbar,
+  IconButton,
 } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// ================================
+// ASSET IMPORTS
+// ================================
 import instagram from '../Assets/Instagram-Logo.png';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
@@ -778,6 +2114,9 @@ import SearchSidebar from './SearchSidebar';
 import NotificationSidebar from './NotificationSidebar';
 import '../Style/Navbar.css';
 
+// ================================
+// NAVIGATION CONFIGURATION
+// ================================
 const navItems = [
   { label: 'Home', icon: <HomeIcon />, path: '/home' },
   { label: 'Search', icon: <SearchIcon />, isSearch: true },
@@ -795,228 +2134,544 @@ const belowNavItems = [
   { label: 'More', icon: <MenuOutlinedIcon />, isMore: true },
 ];
 
+const mobileNavItems = [
+  { label: 'Home', icon: <HomeIcon />, path: '/home' },
+  { label: 'Search', icon: <SearchIcon />, isSearch: true },
+  { label: 'Create', icon: <AddBoxOutlinedIcon />, path: '/createpost' },
+  { label: 'Reels', icon: <ReelsIcon style={{ width: 24, height: 24, fill: '#262626' }} />, path: '/reels' },
+  { label: 'Profile', icon: <ProfileIcon />, path: '/profile' },
+];
+
+// ================================
+// MAIN COMPONENT
+// ================================
 const Navbar = () => {
+  // ================================
+  // STATE MANAGEMENT
+  // ================================
   const [openSearch, setOpenSearch] = useState(false);
   const [openNotification, setOpenNotification] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openLogoutConfirm, setOpenLogoutConfirm] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
+  // ================================
+  // HOOKS & NAVIGATION
+  // ================================
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleSearchToggle = () => setOpenSearch(true);
-  const handleCloseSearch = () => setOpenSearch(false);
-  const handleCloseNotification = () => setOpenNotification(false);
-  const handleTabChange = (event, newValue) => setActiveTab(newValue);
+  // ================================
+  // EFFECTS
+  // ================================
+  useEffect(() => {
+    if (isMobile || isSmallScreen) {
+      const currentPath = location.pathname;
+      const mobileNavIndex = mobileNavItems.findIndex((item) => {
+        if (item.path === currentPath) return true;
+        if (item.isSearch && (currentPath.includes('/search') || openSearch)) return true;
+        return false;
+      });
+      setActiveTab(mobileNavIndex !== -1 ? mobileNavIndex : 0);
+    }
+  }, [location.pathname, isMobile, isSmallScreen, openSearch]);
 
-  // More popover
-  const handleMoreClick = (event) => setAnchorEl(event.currentTarget);
+  // ================================
+  // EVENT HANDLERS
+  // ================================
+  
+  // Search Toggle Handler
+  const handleSearchToggle = () => {
+    const newSearchState = !openSearch;
+    setOpenSearch(newSearchState);
+    setIsCollapsed(newSearchState);
+    if (newSearchState && openNotification) setOpenNotification(false);
+  };
+
+  // Notification Toggle Handler
+  const handleNotificationToggle = () => {
+    const newNotificationState = !openNotification;
+    setOpenNotification(newNotificationState);
+    if (newNotificationState && openSearch) {
+      setOpenSearch(false);
+      setIsCollapsed(false);
+    }
+  };
+
+  // More Menu Handlers
+  const handleMoreClick = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setAnchorEl(event.currentTarget);
+  };
+
   const handleMoreClose = () => setAnchorEl(null);
-  const openMore = Boolean(anchorEl);
 
-  // Logout handlers
+  // Logout Handlers
   const handleLogoutClick = () => {
     setOpenLogoutConfirm(true);
     handleMoreClose();
   };
+
   const handleLogoutConfirm = () => {
-    localStorage.removeItem('loggedInUser');
-    setOpenLogoutConfirm(false);
-    toast.success('Logged out successfully!', {
-      position: 'top-center',
-      autoClose: 2000,
-      theme: 'colored',
-    });
-    setTimeout(() => navigate('/login'), 2100);
+    try {
+      localStorage.removeItem('loggedInUser');
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('userSession');
+      setOpenLogoutConfirm(false);
+      toast.success('Logged out successfully!', { position: 'top-center', autoClose: 2000 });
+      setTimeout(() => navigate('/login', { replace: true }), 2100);
+    } catch (error) {
+      console.error('Error during logout:', error);
+      toast.error('Error logging out. Please try again.', { position: 'top-center', autoClose: 3000 });
+    }
   };
+
   const handleLogoutCancel = () => setOpenLogoutConfirm(false);
 
+  // Navigation Handler
+  const handleNavigation = (path) => {
+    if (path && typeof path === 'string') {
+      try {
+        navigate(path);
+      } catch (error) {
+        console.error('Navigation error:', error);
+        toast.error('Navigation failed. Please try again.', { position: 'top-center', autoClose: 2000 });
+      }
+    }
+  };
+
+  // Mobile Navigation Handler
+  const handleMobileNavChange = (event, newValue) => {
+    if (newValue < 0 || newValue >= mobileNavItems.length) return;
+    setActiveTab(newValue);
+    const item = mobileNavItems[newValue];
+    if (item.isSearch) handleSearchToggle();
+    else if (item.path) handleNavigation(item.path);
+  };
+
+  // ================================
+  // COMPUTED VALUES
+  // ================================
+  const sidebarWidth = isCollapsed ? '75px' : '245px';
+
+  // ================================
+  // RENDER FUNCTIONS
+  // ================================
   return (
     <>
-      {/* Sidebar for md and up */}
-      {!isMobile && (
-        <Box
-          sx={{
-            flex: 0.35,
-            bgcolor: 'white',
-            color: '#262626',
-            display: 'flex',
-            height: '100vh',
-            position: 'fixed',
-            borderRight: '1px solid #dbdbdb',
-            width: openSearch ? '75px' : '245px',
-            transition: 'width 0.3s ease-in-out',
-            zIndex: 20,
-            boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-            overflow: 'hidden',
-          }}
-        >
-          <Box width="100%">
-            <Box
-              sx={{
-                padding: '20px',
-                display: 'flex',
-                justifyContent: openSearch ? 'center' : 'flex-start',
-              }}
-            >
-              <img
-                src={instagram}
-                alt="Instagram Logo"
-                style={{
-                  width: openSearch ? '30px' : '103px',
-                  cursor: 'pointer',
-                  transition: 'width 0.3s ease-in-out',
+      {/* ================================ */}
+      {/* GLOBAL MOBILE STYLES */}
+      {/* ================================ */}
+      {isSmallScreen && (
+        <style jsx global>{`
+          body {
+            padding-top: 56px;
+            padding-bottom: 50px;
+          }
+          .mobile-content {
+            margin-top: 56px;
+            margin-bottom: 50px;
+            min-height: calc(100vh - 106px);
+          }
+        `}</style>
+      )}
+
+      {/* ================================ */}
+      {/* DESKTOP SIDEBAR */}
+      {/* ================================ */}
+      {!isMobile && !isTablet && (
+        <Box sx={{ 
+          width: sidebarWidth, 
+          bgcolor: 'white', 
+          position: 'fixed', 
+          height: '100vh', 
+          borderRight: '1px solid #dbdbdb', 
+          zIndex: 1200, 
+          transition: 'width 0.3s ease', 
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column'
+        }}>
+          {/* Logo Section */}
+          <Box sx={{ 
+            p: isCollapsed ? '25px 0' : '25px 24px', 
+            textAlign: isCollapsed ? 'center' : 'left' 
+          }}>
+            <img 
+              src={instagram} 
+              alt="Instagram" 
+              style={{ 
+                width: isCollapsed ? '24px' : '103px', 
+                cursor: 'pointer', 
+                transition: 'width 0.3s ease' 
+              }} 
+              onClick={() => handleNavigation('/home')} 
+            />
+          </Box>
+
+          {/* Main Navigation Items */}
+          <Box sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            gap: 1,
+            flex: 1,
+            overflow: 'auto',
+            // Hide scrollbar for all browsers
+            '&::-webkit-scrollbar': {
+              display: 'none'
+            },
+            '-ms-overflow-style': 'none',  // IE and Edge
+            'scrollbar-width': 'none'      // Firefox
+          }}>
+            {navItems.map((item) => (
+              <Box
+                key={item.label}
+                onClick={() => {
+                  if (item.isSearch) handleSearchToggle();
+                  else if (item.isNotification) handleNotificationToggle();
+                  else if (item.path) handleNavigation(item.path);
                 }}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '4px',
-                color: '#262626',
-                padding: '10px 12px',
-                pt: 2,
-              }}
-            >
-              {navItems.map(({ label, icon, path, isSearch, isNotification }) => (
-                <Box
-                  key={label}
-                  className="navlink"
-                  onClick={() => {
-                    if (isSearch) handleSearchToggle();
-                    if (isNotification) setOpenNotification(true);
-                  }}
-                  component={isSearch || isNotification ? 'div' : Link}
-                  to={isSearch || isNotification ? undefined : path}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '8px 12px',
-                    borderRadius: '10px',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                  }}
-                  aria-label={`${label} navigation`}
-                >
-                  <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-                    {React.isValidElement(icon)
-                      ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } })
-                      : icon}
-                  </Box>
-                  {!openSearch && (
-                    <Typography sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}>
-                      {label}
-                    </Typography>
-                  )}
+                sx={{
+                  p: isCollapsed ? '12px 0' : '12px 12px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: isCollapsed ? 'center' : 'flex-start',
+                  borderRadius: '8px',
+                  margin: '0 8px',
+                  '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' },
+                }}
+              >
+                <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+                  {item.icon}
                 </Box>
-              ))}
-
-              <Box sx={{ marginTop: 'auto', mt: 4 }}>
-                {belowNavItems.map(({ label, icon, path, isMore }) => (
-                  <Box
-                    key={label}
-                    className="navlink"
-                    onClick={isMore ? handleMoreClick : undefined}
-                    component={isMore ? 'div' : Link}
-                    to={isMore ? undefined : path}
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      padding: '8px 12px',
-                      borderRadius: '10px',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s',
-                    }}
-                    aria-label={`${label} navigation`}
-                  >
-                    <Box sx={{ marginRight: openSearch ? 0 : '16px', fontSize: '24px' }}>
-                      {React.isValidElement(icon)
-                        ? React.cloneElement(icon, { sx: { fontSize: 24, color: '#262626' } })
-                        : icon}
-                    </Box>
-                    {!openSearch && (
-                      <Typography sx={{ fontSize: '16px', fontWeight: 600, color: '#262626' }}>
-                        {label}
-                      </Typography>
-                    )}
-                  </Box>
-                ))}
+                {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
               </Box>
-            </Box>
+            ))}
+          </Box>
+
+          {/* Bottom Navigation Items */}
+          <Box sx={{ 
+            marginTop: 'auto', 
+            width: '100%', 
+            pb: 2,
+            pt: 2,
+            borderTop: '1px solid rgba(0,0,0,0.05)',
+            mt: 2
+          }}>
+            {belowNavItems.map((item) => (
+              <Box 
+                key={item.label} 
+                onClick={(e) => {
+                  if (item.isMore) {
+                    handleMoreClick(e);
+                  } else if (item.path) {
+                    handleNavigation(item.path);
+                  }
+                }}
+                sx={{ 
+                  p: isCollapsed ? '12px 0' : '12px 12px', 
+                  cursor: 'pointer', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: isCollapsed ? 'center' : 'flex-start', 
+                  borderRadius: '8px', 
+                  margin: '0 8px 4px', 
+                  '&:hover': { backgroundColor: 'rgba(0,0,0,0.05)' } 
+                }}
+              >
+                <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '24px' }}>
+                  {item.icon}
+                </Box>
+                {!isCollapsed && <Typography sx={{ ml: 2 }}>{item.label}</Typography>}
+              </Box>
+            ))}
           </Box>
         </Box>
       )}
 
-      {/* Bottom Navigation for sm and xs */}
-      {isSmallScreen && (
-        <BottomNavigation
-          value={activeTab}
-          onChange={handleTabChange}
-          sx={{
-            width: '100%',
-            position: 'fixed',
-            bottom: 0,
-            bgcolor: 'white',
-            borderTop: '1px solid #dbdbdb',
-            zIndex: 20,
-            boxShadow: '0 -2px 5px rgba(0,0,0,0.1)',
-          }}
-        >
-          {navItems.map((item) => (
-            <BottomNavigationAction
-              key={item.label}
-              label={item.label}
-              icon={item.icon}
-              component={item.isSearch || item.isNotification ? 'div' : Link}
-              to={item.isSearch || item.isNotification ? undefined : item.path}
-              onClick={() => {
-                if (item.isSearch) handleSearchToggle();
-                if (item.isNotification) setOpenNotification(true);
-              }}
+      {/* ================================ */}
+      {/* TABLET SIDEBAR */}
+      {/* ================================ */}
+      {isTablet && (
+        <Box sx={{ 
+          width: '75px', 
+          bgcolor: 'white', 
+          position: 'fixed', 
+          height: '100vh', 
+          borderRight: '1px solid #dbdbdb', 
+          zIndex: 1200, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center' 
+        }}>
+          {/* Logo Section */}
+          <Box sx={{ p: '20px' }}>
+            <img 
+              src={instagram} 
+              alt="Instagram" 
+              style={{ width: '24px', cursor: 'pointer' }} 
+              onClick={() => handleNavigation('/home')} 
             />
-          ))}
-          <BottomNavigationAction label="More" icon={<MenuOutlinedIcon />} onClick={handleMoreClick} />
-        </BottomNavigation>
+          </Box>
+
+          {/* Navigation Items */}
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+            {navItems.map((item) => (
+              <IconButton 
+                key={item.label} 
+                onClick={() => handleNavigation(item.path)} 
+                sx={{ margin: '4px 8px' }}
+              >
+                {item.icon}
+              </IconButton>
+            ))}
+          </Box>
+        </Box>
       )}
 
-      {/* Popover for More */}
+      {/* ================================ */}
+      {/* MOBILE NAVIGATION */}
+      {/* ================================ */}
+      {isSmallScreen && (
+        <>
+          {/* Top App Bar */}
+          <AppBar
+            position="fixed"
+            sx={{
+              top: 0,
+              bgcolor: 'white',
+              color: 'black',
+              zIndex: 1300,
+              boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+              borderBottom: '1px solid #dbdbdb',
+            }}
+          >
+            <Toolbar sx={{ minHeight: '56px !important', px: 2 }}>
+              {/* Logo */}
+              <img
+                src={instagram}
+                alt="Instagram"
+                style={{ width: '103px', cursor: 'pointer', height: 'auto' }}
+                onClick={() => handleNavigation('/home')}
+              />
+              <Box sx={{ flexGrow: 1 }} />
+              
+              {/* Right Side Icons */}
+              <IconButton onClick={() => handleNotificationToggle()}>
+                <FavoriteBorderOutlinedIcon />
+              </IconButton>
+              <IconButton onClick={() => handleNavigation('/messages')}>
+                <MessageIcon style={{ width: 24, height: 24, fill: '#262626' }} />
+              </IconButton>
+            </Toolbar>
+          </AppBar>
+
+          {/* Bottom Navigation */}
+          <BottomNavigation
+            value={activeTab}
+            onChange={handleMobileNavChange}
+            showLabels={false}
+            sx={{
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              padding: 0,
+              margin: 0,
+              width: '100%',
+              display: 'flex',
+              height: '50px',
+              zIndex: 1300,
+              borderTop: '1px solid #dbdbdb',
+              backgroundColor: 'white',
+              // Ensure proper spacing on very small screens
+              '& .MuiBottomNavigationAction-root': {
+                minWidth: 'auto',
+                padding: '6px 4px',
+                flex: 1,
+              }
+            }}
+          >
+            {mobileNavItems.map((item, index) => (
+              <BottomNavigationAction
+                key={`${item.label}-${index}`}
+                icon={React.cloneElement(item.icon, {
+                  style: {
+                    ...item.icon.props.style,
+                    fontSize: '20px',
+                    width: '20px',
+                    height: '20px',
+                  },
+                })}
+                sx={{ 
+                  color: '#262626', 
+                  '&.Mui-selected': { color: '#000' },
+                  minWidth: 'auto',
+                  padding: '6px 2px',
+                  flex: 1
+                }}
+              />
+            ))}
+          </BottomNavigation>
+
+          {/* Mobile Content Spacing Styles */}
+          <style jsx global>{`
+            .mobile-content {
+              margin-top: 56px;
+              margin-bottom: 50px;
+              min-height: calc(100vh - 106px);
+            }
+          `}</style>
+        </>
+      )}
+
+      {/* ================================ */}
+      {/* SIDEBARS & OVERLAYS */}
+      {/* ================================ */}
+      <SearchSidebar 
+        open={openSearch} 
+        onClose={() => { 
+          setOpenSearch(false); 
+          setIsCollapsed(false); 
+        }} 
+      />
+      <NotificationSidebar 
+        open={openNotification} 
+        onClose={() => setOpenNotification(false)} 
+      />
+
+      {/* ================================ */}
+      {/* MORE MENU POPOVER */}
+      {/* ================================ */}
       <Popover
-        open={openMore}
+        open={Boolean(anchorEl)}
         anchorEl={anchorEl}
         onClose={handleMoreClose}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-        transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right'}}
+        transformOrigin={{ vertical: 'bottom', horizontal: 'left'}}
+        disableScrollLock={true}
+        PaperProps={{
+          sx: { 
+            borderRadius: 3, 
+            p: 1, 
+            minWidth: 200,
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            border: '1px solid #dbdbdb'
+          },
+        }}
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'transparent'
+          }
+        }}
       >
-        <Box p={2}>
-          <Button variant="contained" color="error" onClick={handleLogoutClick}>
-            Logout
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Settings
+          </Button>
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Your activity
+          </Button>
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Saved
+          </Button>
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Switch appearance
+          </Button>
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Report a problem
+          </Button>
+
+          <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }}
+            onClick={handleMoreClose}
+          >
+            Switch accounts
+          </Button>
+
+          <Box sx={{ borderTop: '1px solid #dbdbdb', my: 1 }} />
+
+          <Button 
+            sx={{ justifyContent: 'flex-start', textTransform: 'none', py: 1.5, px: 2 }} 
+            onClick={handleLogoutClick}
+          >
+            Log out
           </Button>
         </Box>
       </Popover>
 
-      {/* Logout Confirmation Dialog */}
-      <Dialog open={openLogoutConfirm} onClose={handleLogoutCancel}>
-        <DialogTitle>Confirm Logout</DialogTitle>
+      {/* ================================ */}
+      {/* LOGOUT CONFIRMATION DIALOG */}
+      {/* ================================ */}
+      <Dialog 
+        open={openLogoutConfirm} 
+        onClose={handleLogoutCancel} 
+        maxWidth="sm" 
+        fullWidth
+      >
+        <DialogTitle sx={{ textAlign: 'center' }}>
+          Log Out?
+        </DialogTitle>
         <DialogContent>
-          <DialogContentText>Are you sure you want to logout?</DialogContentText>
+          <DialogContentText sx={{ textAlign: 'center' }}>
+            Are you sure you want to log out of your account?
+          </DialogContentText>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleLogoutCancel}>Cancel</Button>
-          <Button onClick={handleLogoutConfirm} variant="contained" color="error">
-            Logout
+        <DialogActions sx={{ justifyContent: 'center', gap: 1, pb: 3 }}>
+          <Button 
+            onClick={handleLogoutCancel} 
+            variant="outlined" 
+            sx={{ minWidth: '100px' }}
+          >
+            Cancel
+          </Button>
+          <Button 
+            onClick={handleLogoutConfirm} 
+            color="error" 
+            variant="contained" 
+            sx={{ minWidth: '100px' }}
+          >
+            Log Out
           </Button>
         </DialogActions>
       </Dialog>
 
-      {/* Sidebars and Toast */}
-      <SearchSidebar open={openSearch} onClose={handleCloseSearch} />
-      <NotificationSidebar open={openNotification} onClose={handleCloseNotification} />
-      <ToastContainer />
+      {/* ================================ */}
+      {/* TOAST NOTIFICATIONS */}
+      {/* ================================ */}
+      <ToastContainer 
+        position="top-center" 
+        autoClose={3000} 
+        hideProgressBar={false} 
+        newestOnTop 
+        closeOnClick 
+        pauseOnHover 
+        style={{ zIndex: 9999 }} 
+      />
     </>
   );
 };
