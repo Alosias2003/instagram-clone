@@ -267,12 +267,13 @@ const Navbar = () => {
             flex: 1,
             overflow: 'auto',
             // Hide scrollbar for all browsers
-            '&::-webkit-scrollbar': {
-              display: 'none'
-            },
-            '-ms-overflow-style': 'none',  // IE and Edge
-            'scrollbar-width': 'none'      // Firefox
-          }}>
+          //   '&::-webkit-scrollbar': {
+          //     display: 'none'
+          //   },
+          //   '-ms-overflow-style': 'none',  // IE and Edge
+          //   'scrollbar-width': 'none'      // Firefox
+          }
+          }>
             {navItems.map((item) => (
               <Box
                 key={item.label}
