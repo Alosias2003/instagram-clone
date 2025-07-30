@@ -835,11 +835,11 @@ const Profile = () => {
 
   return (
     <Box sx={{ 
-      maxWidth: { xs: '100%', sm: '600px', md: '935px' }, 
+      maxWidth: { xs: '100%', sm: '600px', md: '535px',lg:'900px' }, 
       mx: 'auto', 
-      mt: { xs: 2, sm: 4 }, 
-      px: { xs: 0, sm: 2 }, 
-      pb: 10 
+      // mt: { xs: 2, sm: 4 }, 
+      // px: { xs: 0, sm: 2 }, 
+       pb: 10 
     }}>
       {/* Header */}
       <Box sx={{ px: { xs: 2, sm: 0 } }}>
